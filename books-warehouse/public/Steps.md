@@ -3,7 +3,7 @@
 - [Books Warehouse](#books-warehouse)
   - [Basic Project Setup](#basic-project-setup)
     - [Project Setup 01 (Basic Setup)](#project-setup-01-basic-setup)
-    - [Project Setup 02 (Necessary Pages & Sections)](#project-setup-02-necessary-pages--sections)
+    - [Project Setup 02 (Design Necessary Pages & Sections)](#project-setup-02-design-necessary-pages--sections)
 
 # Books Warehouse
 
@@ -24,12 +24,15 @@
 
 **[🔼Back to Top](#table-of-contents)**
 
-### Project Setup 02 (Necessary Pages & Sections)
+### Project Setup 02 (Design Necessary Pages & Sections)
 
 - Banner section added
 - Services section added
 - Core Values section added
 - Footer section added
-- 404 page added
+- 404 page added 
+- Register page Design
+- Login page Design
+- Retrieve Password page Design
 
 **[🔼Back to Top](#table-of-contents)**
