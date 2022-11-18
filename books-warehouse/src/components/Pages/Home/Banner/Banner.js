@@ -23,8 +23,8 @@ const Banner = () => {
         }
     }
     return (
-        <div style={styles.header} className='absolute w-full'>
-            <div style={styles.content} className='text-white'>
+        <div style={styles.header} className='relative w-full'>
+            <div style={styles.content} className='text-white absolute'>
                 <h2 className='text-2xl sm:text-4xl text-amber-400 text-semibold font-sans uppercase'>Book Warehouse</h2>
                 <p className='text-base sm:text-lg text-amber-300'>Reading is a conversation. All books talk, but a good book listens as well.</p>
             </div>

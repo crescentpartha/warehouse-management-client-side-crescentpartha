@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Packaging and Storage",
+        "description": "We can package and store your books.",
+        "iconName": "FaDropbox"
+    },
+    {
+        "id": 2,
+        "name": "Cargo",
+        "description": "Let us transport your books from point A to point B fast and securely.",
+        "iconName": "FaCarSide"
+    },
+    {
+        "id": 3,
+        "name": "Worldwide transport",
+        "description": "We can transport your books anywhere in the world.",
+        "iconName": "FaGlobeAsia"
+    },
+    {
+        "id": 4,
+        "name": "Warehousing",
+        "description": "We have top notch security and loads of space. Store your books at our warehouse.",
+        "iconName": "HiArchive"
+    },
+    {
+        "id": 5,
+        "name": "Door-to-Door Delivery",
+        "description": "Do you need something delivered? We are what you are looking for!",
+        "iconName": "FaHome"
+    },
+    {
+        "id": 6,
+        "name": "Ground Transport",
+        "description": "Transport your things with our super moving vans.",
+        "iconName": "FaRoad"
+    }
+]
