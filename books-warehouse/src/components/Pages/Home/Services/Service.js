@@ -18,22 +18,22 @@ const Service = ({ service }) => {
             </div>
             <div>
                 {
-                    iconName === 'FaDropbox' && <FaDropbox className={`${hoverEffect && "text-blue-400"} text-5xl text-gray-400`} />
+                    iconName === 'FaDropbox' && <FaDropbox className={`${hoverEffect ? "text-blue-400" : "text-gray-400"} text-5xl`} />
                 }
                 {
-                    iconName === 'FaCarSide' && <FaCarSide className={`${hoverEffect && "text-blue-400"} text-5xl text-gray-400`} />
+                    iconName === 'FaCarSide' && <FaCarSide className={`${hoverEffect ? "text-blue-400" : "text-gray-400"} text-5xl`} />
                 }
                 {
-                    iconName === 'FaGlobeAsia' && <FaGlobeAsia className={`${hoverEffect && "text-blue-400"} text-5xl text-gray-400`} />
+                    iconName === 'FaGlobeAsia' && <FaGlobeAsia className={`${hoverEffect ? "text-blue-400" : "text-gray-400"} text-5xl`} />
                 }
                 {
-                    iconName === 'FaHome' && <FaHome className={`${hoverEffect && "text-blue-400"} text-5xl text-gray-400`} />
+                    iconName === 'FaHome' && <FaHome className={`${hoverEffect ? "text-blue-400" : "text-gray-400"} text-5xl`} />
                 }
                 {
-                    iconName === 'FaRoad' && <FaRoad className={`${hoverEffect && "text-blue-400"} text-5xl text-gray-400`} />
+                    iconName === 'FaRoad' && <FaRoad className={`${hoverEffect ? "text-blue-400" : "text-gray-400"} text-5xl`} />
                 }
                 {
-                    iconName === 'HiArchive' && <HiArchive className={`${hoverEffect && "text-blue-400"} text-5xl text-gray-400`} />
+                    iconName === 'HiArchive' && <HiArchive className={`${hoverEffect ? "text-blue-400" : "text-gray-400"} text-5xl`} />
                 }
             </div>
         </div>
