@@ -30,5 +30,6 @@
 - Services section added
 - Core Values section added
 - Footer section added
+- 404 page added
 
 **[🔼Back to Top](#table-of-contents)**
