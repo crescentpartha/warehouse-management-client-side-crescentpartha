@@ -29,5 +29,6 @@
 - Banner section added
 - Services section added
 - Core Values section added
+- Footer section added
 
 **[🔼Back to Top](#table-of-contents)**

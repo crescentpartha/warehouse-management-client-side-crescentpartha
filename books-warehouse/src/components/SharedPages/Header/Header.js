@@ -27,7 +27,7 @@ const Header = () => {
                             <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/manage">Manage</Link>
                         </li>
                         <li>
-                            <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/about">Blogs</Link>
+                            <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/blogs">Blogs</Link>
                         </li>
                         <li>
                             <Link className='lg:px-6 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-full block text-center' to="/login">Login</Link>
