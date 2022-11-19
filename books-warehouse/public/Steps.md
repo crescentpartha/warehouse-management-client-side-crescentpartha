@@ -48,5 +48,6 @@
 - `JavaScript Vs Nodejs` blog post added
 - `SQL Vs NoSQL` blog post added
 - `Nodejs Vs MongoDB` blog post added
+- `JWT` blog post added
 
 **[🔼Back to Top](#table-of-contents)**

@@ -18,7 +18,7 @@ const JavascriptVsNode = () => {
                     <p className='text-justify text-gray-500 pb-2'>It may operate on a variety of operating systems, including Windows, Linux, and Mac OS. It provides a cross-platform runtime environment for developing extremely scalable server-side JavaScript applications with event-driven, non-blocking (asynchronous) I/O.</p>
                 </div>
                 <div>
-                    <h2 className='text-lg sm:text-2xl md:text-3xl py-4'>JavaScript Vs Nodejs: The Key Differences</h2>
+                    <h2 className='text-lg sm:text-2xl md:text-3xl py-4'><a className='text-blue-400' href='https://www.calltutors.com/blog/javascript-vs-nodejs/'>JavaScript Vs Nodejs:</a> The Key Differences</h2>
                     <div className='overflow-auto'>
                         <table className="border-collapse border border-slate-500 table-auto mx-auto w-full">
                             <thead>
@@ -51,33 +51,6 @@ const JavascriptVsNode = () => {
                             </tbody>
                         </table>
                     </div>
-
-                    {/* <table className="border-collapse border border-slate-500 table-auto mx-auto w-full">
-                        <thead>
-                            <tr className='bg-gray-400'>
-                                <th className='border p-2'>Song</th>
-                                <th className='border p-2'>Artist</th>
-                                <th className='border p-2'>Artist</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className='border p-2 align-top'>Bones</td>
-                                <td className='border p-2 align-top'>Lockyer</td>
-                                <td className='border p-2 align-top'>1961</td>
-                            </tr>
-                            <tr className='bg-gray-300'>
-                                <td className='border p-2 align-top'>Witchy</td>
-                                <td className='border p-2 align-top'>Eagles</td>
-                                <td className='border p-2 align-top'>1972</td>
-                            </tr>
-                            <tr>
-                                <td className='border p-2 align-top'>Shining</td>
-                                <td className='border p-2 align-top'>Earth</td>
-                                <td className='border p-2 align-top'>1975</td>
-                            </tr>
-                        </tbody>
-                    </table> */}
                 </div>
             </div>
         </div>
