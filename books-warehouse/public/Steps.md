@@ -4,6 +4,7 @@
   - [Basic Project Setup](#basic-project-setup)
     - [Project Setup 01 (Basic Setup)](#project-setup-01-basic-setup)
     - [Project Setup 02 (Design Necessary Pages & Sections)](#project-setup-02-design-necessary-pages--sections)
+    - [Project Setup 03 (Design Necessary Pages & Sections)](#project-setup-03-design-necessary-pages--sections)
 
 # Books Warehouse
 
@@ -35,5 +36,13 @@
 - Login page Design
 - Retrieve Password page Design
 - Handle errors in Register, Login, and Retrieve Password form
+
+**[🔼Back to Top](#table-of-contents)**
+
+### Project Setup 03 (Design Necessary Pages & Sections)
+
+- Create components such as `BlogsHome`, `JavascriptVsNode`, `NodeVsMongo`, `SqlVsNoSql`, `Jwt`, `CustomLink`
+- Implement the dynamic routing for the Blogs post.
+- CustomLink added for Blogs post navigation section.
 
 **[🔼Back to Top](#table-of-contents)**
