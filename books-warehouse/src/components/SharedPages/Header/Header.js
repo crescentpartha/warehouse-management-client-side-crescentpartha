@@ -7,7 +7,7 @@ const Header = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className='border-b border-gray-300 py-2'>
+        <header className='border-b border-gray-300 bg-white py-2 sticky top-0 z-10'>
             <div className='flex items-center justify-between container px-4 mx-auto flex-wrap w-full'>
                 <div>
                     <Link className='flex items-center justify-between' to='/'>

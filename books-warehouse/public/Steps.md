@@ -4,7 +4,7 @@
   - [Basic Project Setup](#basic-project-setup)
     - [`Project Setup 01 (Basic Setup)`](#project-setup-01-basic-setup)
     - [`Project Setup 02 (Design Necessary Pages & Sections)`](#project-setup-02-design-necessary-pages--sections)
-    - [`Project Setup 03 (Design Necessary Pages & Sections)`](#project-setup-03-design-necessary-pages--sections)
+    - [`Project Setup 03 (Design Blogs Sections)`](#project-setup-03-design-blogs-sections)
 
 # Books Warehouse
 
@@ -39,11 +39,12 @@
 
 **[🔼Back to Top](#table-of-contents)**
 
-### `Project Setup 03 (Design Necessary Pages & Sections)`
+### `Project Setup 03 (Design Blogs Sections)`
 
 - Create components such as `BlogsHome`, `JavascriptVsNode`, `NodeVsMongo`, `SqlVsNoSql`, `Jwt`, `CustomLink`, `CustomLinkTag`.
 - Implement the `dynamic routing` for the Blogs post.
 - `CustomLink` ___(Active Link)___ added for Blogs' ___Recent Post___ navigation section.
 - `CustomLinkTag` ___(Active Link)___ added for Blogs' ___Tag___ navigation section.
+- `JavaScript Vs Nodejs` blog post added
 
 **[🔼Back to Top](#table-of-contents)**
