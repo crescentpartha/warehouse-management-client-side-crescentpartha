@@ -2,15 +2,15 @@
 
 - [Books Warehouse](#books-warehouse)
   - [Basic Project Setup](#basic-project-setup)
-    - [Project Setup 01 (Basic Setup)](#project-setup-01-basic-setup)
-    - [Project Setup 02 (Design Necessary Pages & Sections)](#project-setup-02-design-necessary-pages--sections)
-    - [Project Setup 03 (Design Necessary Pages & Sections)](#project-setup-03-design-necessary-pages--sections)
+    - [`Project Setup 01 (Basic Setup)`](#project-setup-01-basic-setup)
+    - [`Project Setup 02 (Design Necessary Pages & Sections)`](#project-setup-02-design-necessary-pages--sections)
+    - [`Project Setup 03 (Design Necessary Pages & Sections)`](#project-setup-03-design-necessary-pages--sections)
 
 # Books Warehouse
 
 ## Basic Project Setup
 
-### Project Setup 01 (Basic Setup)
+### `Project Setup 01 (Basic Setup)`
 
 - [Project Setup 01 (Basic Setup)](https://github.com/crescentpartha/Red-Onion/blob/main/red-onion/__Steps__.md#project-setup-01-basic-setup)
 - [Setup tailwind CSS with Create React App (website)](https://tailwindcss.com/docs/guides/create-react-app)
@@ -25,24 +25,25 @@
 
 **[🔼Back to Top](#table-of-contents)**
 
-### Project Setup 02 (Design Necessary Pages & Sections)
+### `Project Setup 02 (Design Necessary Pages & Sections)`
 
-- Banner section added
-- Services section added
-- Core Values section added
-- Footer section added
-- 404 page added 
-- Register page Design
-- Login page Design
-- Retrieve Password page Design
-- Handle errors in Register, Login, and Retrieve Password form
+- `Banner` section added
+- `Services` section added
+- `Core Values` section added
+- `Footer` section added
+- `404 page` added 
+- `Register` page Design
+- `Login` page Design
+- `RetrievePassword` page Design
+- `Handle errors` in ___Register___, ___Login___, and ___RetrievePassword___ form
 
 **[🔼Back to Top](#table-of-contents)**
 
-### Project Setup 03 (Design Necessary Pages & Sections)
+### `Project Setup 03 (Design Necessary Pages & Sections)`
 
-- Create components such as `BlogsHome`, `JavascriptVsNode`, `NodeVsMongo`, `SqlVsNoSql`, `Jwt`, `CustomLink`
-- Implement the dynamic routing for the Blogs post.
-- CustomLink added for Blogs post navigation section.
+- Create components such as `BlogsHome`, `JavascriptVsNode`, `NodeVsMongo`, `SqlVsNoSql`, `Jwt`, `CustomLink`, `CustomLinkTag`.
+- Implement the `dynamic routing` for the Blogs post.
+- `CustomLink` ___(Active Link)___ added for Blogs' ___Recent Post___ navigation section.
+- `CustomLinkTag` ___(Active Link)___ added for Blogs' ___Tag___ navigation section.
 
 **[🔼Back to Top](#table-of-contents)**
