@@ -46,5 +46,6 @@
 - `CustomLink` ___(Active Link)___ added for Blogs' ___Recent Post___ navigation section.
 - `CustomLinkTag` ___(Active Link)___ added for Blogs' ___Tag___ navigation section.
 - `JavaScript Vs Nodejs` blog post added
+- `SQL Vs NoSQL` blog post added
 
 **[🔼Back to Top](#table-of-contents)**
