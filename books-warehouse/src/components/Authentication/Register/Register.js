@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 import google from '../../../images/google.png';
 
 const Register = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
         console.log(data);
     }
+    // console.log(errors);
 
     return (
         <div className='bg-gray-200 w-60 sm:w-80 mx-auto my-10 py-5 rounded'>
@@ -30,20 +31,42 @@ const Register = () => {
                     className='py-2 px-2 mb-2 rounded'
                     placeholder='Name'
                     type="text"
-                    {...register("name", { required: true, maxLength: 20, pattern: /^[A-Za-z]+$/i })}
+                    {...register("name", {
+                        required: "Name is required",
+                        maxLength: 20,
+                        pattern: {
+                            value: /^[A-Za-z]+$/i,
+                            message: 'Name is invalid'
+                        }
+                    })}
                 />
+                <p className='text-red-400'>{errors?.name?.message}</p>
                 <input
                     className='py-2 px-2 mb-2 rounded'
                     placeholder='Email'
                     type="email"
-                    {...register("email", { required: true })}
+                    {...register("email", { 
+                        required: "Email is required",
+                        pattern: {
+                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                            message: "Email is invalid"
+                        }
+                    })}
                 />
+                <p className='text-red-400'>{errors?.email?.message}</p>
                 <input
                     className='py-2 px-2 mb-2 rounded'
                     placeholder='Password'
                     type="password"
-                    {...register("password", { required: true, pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,20})/ })}
+                    {...register("password", { 
+                        required: "Password is required", 
+                        pattern: {
+                            value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,20})/,
+                            message: "At least one [a-z][A-Z][0-9][!@#$%^&*] from each categories"
+                        } 
+                    })}
                 />
+                <p className='text-red-400'>{errors?.password?.message}</p>
                 <input
                     className='py-2 px-2 rounded bg-blue-500 hover:bg-blue-600 text-white font-semibold'
                     type="submit"

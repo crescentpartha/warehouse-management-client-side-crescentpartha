@@ -3,11 +3,12 @@ import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 
 const RetrievePassword = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
         console.log(data);
     }
+    // console.log(errors);
 
     return (
         <div className='bg-gray-200 w-60 sm:w-80 mx-auto my-10 py-5 rounded'>
@@ -18,8 +19,15 @@ const RetrievePassword = () => {
                     className='py-2 px-2 mb-2 rounded'
                     placeholder='Email'
                     type="email"
-                    {...register("email", { required: true })}
+                    {...register("email", {
+                        required: "Email is required",
+                        pattern: {
+                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                            message: "Email is invalid"
+                        }
+                    })}
                 />
+                <p className='text-red-400'>{errors?.email?.message}</p>
                 <input
                     className='py-2 px-2 rounded bg-blue-500 hover:bg-blue-600 text-white font-semibold'
                     type="submit"

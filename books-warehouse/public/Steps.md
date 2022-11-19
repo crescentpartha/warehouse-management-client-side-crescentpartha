@@ -34,5 +34,6 @@
 - Register page Design
 - Login page Design
 - Retrieve Password page Design
+- Handle errors in Register, Login, and Retrieve Password form
 
 **[🔼Back to Top](#table-of-contents)**
