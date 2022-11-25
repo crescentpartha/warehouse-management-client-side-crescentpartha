@@ -67,9 +67,9 @@
   - [signOut from react-firebase-hooks](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#signout-from-react-firebase-hooks-headerjs)
   - [Introduction to Protected Route and Require Auth](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#618-introduction-to-protected-route-and-require-auth)
   - [Fix Reload redirect to login page](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#628-fix-reload-redirect-to-login-page-and-display-toast-message)
-  - Create some routes called `Manage Items`, `Add Item`, `My Items` and make them Protected Route or RequireAuth
-  - [Display alert/notification using React-Toastify](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#show-the-reset-password-alert-using-react-toastify)
-  - [Implement Google Login System from react-firebase-hooks](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#623-implement-google-login-system-from-react-firebase-hooks)
+- Create some routes called `Manage Items`, `Add Item`, `My Items` and make them Protected Route or RequireAuth
+- [Display alert/notification using React-Toastify](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#show-the-reset-password-alert-using-react-toastify)
+- [Implement Google Login System from react-firebase-hooks](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#623-implement-google-login-system-from-react-firebase-hooks)
 
 `Notes:` `.env.local` file need to put on `Root folder` like ___book-warehouse___ and `firebase.init.js` file should be in the `src` folder. After that run `npm start` command. Otherwise, `webpack` doesn't identify the modification.
 
