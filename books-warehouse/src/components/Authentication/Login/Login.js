@@ -1,13 +1,29 @@
 import React from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import google from '../../../images/google.png';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+    const navigate = useNavigate();
+
+    if (user) {
+        navigate('/home');
+    }
 
     const onSubmit = data => {
-        console.log(data);
+        const { email, password } = data;
+        // console.log(data);
+
+        signInWithEmailAndPassword(email, password);
     }
     // console.log(errors);
 
@@ -44,14 +60,20 @@ const Login = () => {
                     className='py-2 px-2 mb-2 rounded'
                     placeholder='Password'
                     type="password"
-                    {...register("password", { 
-                        required: "Password is required", 
+                    {...register("password", {
+                        required: "Password is required",
                         pattern: {
                             value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,20})/,
                             message: "At least one [a-z][A-Z][0-9][!@#$%^&*] from each categories"
-                        } 
+                        }
                     })}
                 />
+                {
+                    loading && <p className='text-red-400'>Loading...</p>
+                }
+                {
+                    error && <p className='text-red-400'>{error.message}</p>
+                }
                 <p className='text-red-400'>{errors?.password?.message}</p>
                 <input
                     className='py-2 px-2 rounded bg-blue-500 hover:bg-blue-600 text-white font-semibold'

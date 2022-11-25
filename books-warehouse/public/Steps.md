@@ -6,6 +6,7 @@
     - [`Project Setup 02 (Design Necessary Pages & Sections)`](#project-setup-02-design-necessary-pages--sections)
     - [`Project Setup 03 (Design Blogs Sections)`](#project-setup-03-design-blogs-sections)
     - [`Project Setup 04 (Firebase Deploy & Authentication)`](#project-setup-04-firebase-deploy--authentication)
+      - [`Some Errors and/or Solutions`](#some-errors-andor-solutions)
 
 # Books Warehouse
 
@@ -55,9 +56,23 @@
 
 ### `Project Setup 04 (Firebase Deploy & Authentication)`
 
+- [Authentication Steps or Auth_steps](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#authentication-steps-or-auth_steps)
+- [Firebase Hosting/Deploy Steps: (for 1st time)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#firebase-hostingdeploy-steps-for-1st-time)
+- [Firebase Hosting/Deploy Steps: (for 2nd/multiple times)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#firebase-hostingdeploy-steps-for-2ndmultiple-times)
 - [Adding Custom Environment Variables: (Set Environment Variables for Firebase Config)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#adding-custom-environment-variables-set-environment-variables-for-firebase-config)
 - [Email password based authentication with react firebase hooks](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#617-email-password-based-authentication-with-react-firebase-hooks)
+  - [Install react-firebase-hooks](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#install-react-firebase-hooks)
+  - [useCreateUserWithEmailAndPassword from react-firebase-hooks](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#usecreateuserwithemailandpassword-from-react-firebase-hooks-signupjs)
+  - [useSignInWithEmailAndPassword from react-firebase-hooks](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#usesigninwithemailandpassword-from-react-firebase-hooks-loginjs)
 
 `Notes:` `.env.local` file need to put on `Root folder` like ___book-warehouse___ and `firebase.init.js` file should be in the `src` folder. After that run `npm start` command. Otherwise, `webpack` doesn't identify the modification.
+
+**[🔼Back to Top](#table-of-contents)**
+
+#### `Some Errors and/or Solutions`
+
+- [Bug: too hard to fix "Cannot update a component from inside the function body of a different component."](https://github.com/facebook/react/issues/18178#issuecomment-595846312)
+- [Firebase Error: auth/invalid-api-key, Your API key is invalid, please check you have copied it correctly](https://github.com/firebase/quickstart-js/issues/61#issuecomment-1327236639) (My Comment)
+- [Firebase invalid api key error in console](https://stackoverflow.com/questions/54636324/firebase-invalid-api-key-error-in-console)
 
 **[🔼Back to Top](#table-of-contents)**
