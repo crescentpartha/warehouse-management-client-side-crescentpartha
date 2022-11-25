@@ -2,9 +2,17 @@ import React, { useState } from 'react';
 import logo from '../../../images/logo.png';
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
+    const [user] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+    }
 
     return (
         <header className='border-b border-gray-300 bg-white py-2 sticky top-0 z-10'>
@@ -30,7 +38,13 @@ const Header = () => {
                             <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/blogs/javascript-vs-node">Blogs</Link>
                         </li>
                         <li>
-                            <Link className='lg:px-6 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-full block text-center' to="/login">Login</Link>
+                            {
+                                user ? <button className='lg:px-6 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-full block text-center' onClick={logout}>Sign Out</button>
+                                    :
+                                    <>
+                                        <Link className='lg:px-6 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-full block text-center' to="/login">Login</Link>
+                                    </>
+                            }
                         </li>
                     </ul>
                 </nav>
