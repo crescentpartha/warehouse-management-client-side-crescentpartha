@@ -32,17 +32,23 @@ const Header = () => {
                             <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/home">Home</Link>
                         </li>
                         <li>
-                            <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/manage">Manage</Link>
-                        </li>
-                        <li>
                             <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/blogs/javascript-vs-node">Blogs</Link>
                         </li>
                         <li>
+                            { user && <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/manage">Manage Items</Link> }
+                        </li>
+                        <li>
+                            { user && <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/add-item">Add Item</Link> }
+                        </li>
+                        <li>
+                            { user && <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/my-items">My Items</Link> }
+                        </li>
+                        <li>
                             {
-                                user ? <button className='lg:px-6 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-full block text-center' onClick={logout}>Sign Out</button>
+                                user ? <button className='lg:px-6 py-2 px-2 bg-blue-700 hover:bg-blue-600 text-white rounded-full block text-center mx-auto' onClick={logout}>Sign Out</button>
                                     :
                                     <>
-                                        <Link className='lg:px-6 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-full block text-center' to="/login">Login</Link>
+                                        <Link className='lg:px-6 py-2 px-2 bg-blue-700 hover:bg-blue-600 text-white rounded-full block text-center' to="/login">Login</Link>
                                     </>
                             }
                         </li>

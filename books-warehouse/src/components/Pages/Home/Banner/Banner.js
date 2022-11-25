@@ -5,7 +5,7 @@ const Banner = () => {
     const styles = {
         header: {
             backgroundImage: `url(${backImg})`,
-            height: '60vh',
+            height: '90vh',
             width: '100%',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
