@@ -5,6 +5,7 @@
     - [`Project Setup 01 (Basic Setup)`](#project-setup-01-basic-setup)
     - [`Project Setup 02 (Design Necessary Pages & Sections)`](#project-setup-02-design-necessary-pages--sections)
     - [`Project Setup 03 (Design Blogs Sections)`](#project-setup-03-design-blogs-sections)
+    - [`Project Setup 04 (Firebase Deploy & Authentication)`](#project-setup-04-firebase-deploy--authentication)
 
 # Books Warehouse
 
@@ -49,5 +50,14 @@
 - `SQL Vs NoSQL` blog post added
 - `Nodejs Vs MongoDB` blog post added
 - `JWT` blog post added
+
+**[🔼Back to Top](#table-of-contents)**
+
+### `Project Setup 04 (Firebase Deploy & Authentication)`
+
+- [Adding Custom Environment Variables: (Set Environment Variables for Firebase Config)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#adding-custom-environment-variables-set-environment-variables-for-firebase-config)
+- [Email password based authentication with react firebase hooks](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#617-email-password-based-authentication-with-react-firebase-hooks)
+
+`Notes:` `.env.local` file need to put on `Root folder` like ___book-warehouse___ and `firebase.init.js` file should be in the `src` folder. After that run `npm start` command. Otherwise, `webpack` doesn't identify the modification.
 
 **[🔼Back to Top](#table-of-contents)**
