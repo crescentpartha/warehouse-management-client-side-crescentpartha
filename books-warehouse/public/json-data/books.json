@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "name": "Interesting Facts For Curious Minds",
+        "img": "https://i.ibb.co/cvWDcDC/Curious-Minds.jpg",
+        "author": "Jordan Moore",
+        "description": "Interesting Facts For Curious Minds gives you the answer to all these and many, many more questions that I know have crossed your mind from time to time. This book is divided into 63 chapters by topic for your convenience, bringing you a nice mix of science, history, pop culture, and all sorts of stuff in between. Each chapter contains 25 concise yet engaging factoids that are sure to make you think and at times laugh. How you read this book is entirely up to you. I'm sure most of you will read it cover to cover at some point, but when you're with friends and family you can pick the chapters out that most appeal to all of you. However you read this book, I guarantee you'll find it one of the best tools to pass some time, relax alone, or connect with others. So sit back, relax, and get ready to learn some truly interesting facts!",
+        "price": "$12.90",
+        "ratings": "534",
+        "quantity": "120",
+        "supplier_name": "Trivia"
+    },
+    {
+        "id": 2,
+        "name": "It Starts with Us",
+        "img": "https://i.ibb.co/n6gM5V6/It-Starts-With-Us.jpg",
+        "author": "Colleen Hoover",
+        "description": "Lily and her ex-husband, Ryle, have just settled into a civil coparenting rhythm when she suddenly bumps into her first love, Atlas, again. After nearly two years separated, she is elated that for once, time is on their side, and she immediately says yes when Atlas asks her on a date. But her excitement is quickly hampered by the knowledge that, though they are no longer married, Ryle is still very much a part of her life—and Atlas Corrigan is the one man he will hate being in his ex-wife and daughter's life.",
+        "price": "$15.50",
+        "ratings": "253",
+        "quantity": "90",
+        "supplier_name": "Amazon"
+    },
+    {
+        "id": 3,
+        "name": "Atomic Habits",
+        "img": "https://i.ibb.co/H4S2fm2/Atomic-Habits.jpg",
+        "author": "James Clear",
+        "description": "Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits--whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal.",
+        "price": "$13.30",
+        "ratings": "124",
+        "quantity": "210",
+        "supplier_name": "Prime"
+    },
+    {
+        "id": 4,
+        "name": "Reminders of Him",
+        "img": "https://i.ibb.co/L1CvJ6v/Reminders-Of-Him.jpg",
+        "author": "Colleen Hoover",
+        "description": "After serving five years in prison for a tragic mistake, Kenna Rowan returns to the town where it all went wrong, hoping to reunite with her four-year-old daughter. But the bridges Kenna burned are proving impossible to rebuild. Everyone in her daughter's life is determined to shut Kenna out, no matter how hard she works to prove herself.",
+        "price": "$10.90",
+        "ratings": "504",
+        "quantity": "101",
+        "supplier_name": "Trigon"
+    },
+    {
+        "id": 5,
+        "name": "Fairy Tale",
+        "img": "https://i.ibb.co/sm5yWck/Fairy-Tale.jpg",
+        "author": "Stephen King",
+        "description": "Charlie Reade looks like a regular high school kid, great at baseball and football, a decent student. But he carries a heavy load. His mom was killed in a hit-and-run accident when he was seven, and grief drove his dad to drink. Charlie learned how to take care of himself—and his dad. When Charlie is seventeen, he meets a dog named Radar and her aging master, Howard Bowditch, a recluse in a big house at the top of a big hill, with a locked shed in the backyard. Sometimes strange sounds emerge from it.",
+        "price": "$32.90",
+        "ratings": "432",
+        "quantity": "131",
+        "supplier_name": "USA Publisher"
+    },
+    {
+        "id": 6,
+        "name": "Harry Potter and the Order of the Phoenix",
+        "img": "https://i.ibb.co/dpxhQq9/Harry-Potter.jpg",
+        "author": "J. K. Rowling",
+        "description": "There is a door at the end of a silent corridor. And it's haunting Harry Potter's dreams. Why else would he be waking in the middle of the night, screaming in terror? It's not just the upcoming O.W.L. exams; a new teacher with a personality like poisoned honey; a venomous, disgruntled house-elf; or even the growing threat of He-Who-Must-Not-Be-Named. Now Harry Potter is faced with the unreliability of the very government of the magical world and the impotence of the authorities at Hogwarts. Despite this (or perhaps because of it), he finds depth and strength in his friends, beyond what even he knew; boundless loyalty; and unbearable sacrifice.",
+        "price": "$17.90",
+        "ratings": "574",
+        "quantity": "150",
+        "supplier_name": "Children's Fantasy & Magic Books"
+    },
+    {
+        "id": 7,
+        "name": "Enola Holmes",
+        "img": "https://i.ibb.co/wYhjBPH/Enola-Holmes.jpg",
+        "author": "Serena Blasco",
+        "description": "14-year-old Enola Holmes wakes on her birthday to discover that her mother has disappeared from the family's country manor, leaving only a collection of flowers and a coded message book. With Sherlock and Mycroft determined to ship her off to a boarding school, Enola escapes, displaying a cleverness that even impresses the elder Holmes. But nothing prepares her for what lies ahead…",
+        "price": "$11.10",
+        "ratings": "134",
+        "quantity": "110",
+        "supplier_name": "Graphic Novels"
+    },
+    {
+        "id": 8,
+        "name": "Where the Crawdads Sing",
+        "img": "https://i.ibb.co/WWSXBXS/Where-The-Crawdads-Sing.jpg",
+        "author": "Delia Owens",
+        "description": "For years, rumors of the “Marsh Girl” have haunted Barkley Cove, a quiet town on the North Carolina coast. So in late 1969, when handsome Chase Andrews is found dead, the locals immediately suspect Kya Clark, the so-called Marsh Girl. But Kya is not what they say. Sensitive and intelligent, she has survived for years alone in the marsh that she calls home, finding friends in the gulls and lessons in the sand. Then the time comes when she yearns to be touched and loved. When two young men from town become intrigued by her wild beauty, Kya opens herself to a new life—until the unthinkable happens.",
+        "price": "$13.93",
+        "ratings": "533",
+        "quantity": "123",
+        "supplier_name": "New Atomic"
+    },
+    {
+        "id": 9,
+        "name": "Ugly Love",
+        "img": "https://i.ibb.co/D5SSYvt/Ugly-Love.jpg",
+        "author": "Colleen Hoover",
+        "description": "When Tate Collins meets airline pilot Miles Archer, she doesn't think it's love at first sight. They wouldn't even go so far as to consider themselves friends. The only thing Tate and Miles have in common is an undeniable mutual attraction. Once their desires are out in the open, they realize they have the perfect set-up. He doesn't want love, she doesn't have time for love, so that just leaves the sex. Their arrangement could be surprisingly seamless, as long as Tate can stick to the only two rules Miles has for her.",
+        "price": "$17.90",
+        "ratings": "274",
+        "quantity": "132",
+        "supplier_name": "Imagine"
+    },
+    {
+        "id": 10,
+        "name": "The Body Keeps the Score",
+        "img": "https://i.ibb.co/HGzSb3w/The-Body-Keeps-The-Scores.jpg",
+        "author": "Bessel van der Kolk M.D.",
+        "description": "Trauma is a fact of life. Veterans and their families deal with the painful aftermath of combat; one in five Americans has been molested; one in four grew up with alcoholics; one in three couples have engaged in physical violence. Dr. Bessel van der Kolk, one of the world's foremost experts on trauma, has spent over three decades working with survivors. In The Body Keeps the Score, he uses recent scientific advances to show how trauma literally reshapes both body and brain, compromising sufferers' capacities for pleasure, engagement, self-control, and trust. He explores innovative treatments—from neurofeedback and meditation to sports, drama, and yoga—that offer new paths to recovery by activating the brain's natural neuroplasticity. Based on Dr. van der Kolk's own research and that of other leading specialists, The Body Keeps the Score exposes the tremendous power of our relationships both to hurt and to heal—and offers new hope for reclaiming lives.",
+        "price": "$13.90",
+        "ratings": "554",
+        "quantity": "105",
+        "supplier_name": "Meagan"
+    }
+]
