@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useBooks from '../../../../../hooks/useBooks';
 import Item from '../Item/Item';
 
@@ -27,6 +28,9 @@ const Items = () => {
                         book={book}
                     ></Item>)
                 }
+            </div>
+            <div className='my-5'>
+                <Link className='bg-blue-700 hover:bg-blue-600 px-5 py-2 rounded text-white' to='/manage'>Manage Inventories</Link>
             </div>
         </div>
     );

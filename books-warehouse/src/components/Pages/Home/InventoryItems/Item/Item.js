@@ -11,8 +11,14 @@ const Item = ({ book }) => {
                 <p><span className='italic'>{author}</span> (Author)</p>
                 <p>Publisher: <span className='italic'>{supplier_name}</span></p>
                 <p className='font-bold text-yellow-600'>{price}</p>
-                <p className='flex flex-nowrap items-center justify-center gap-1 text-yellow-600'><FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt /> <span className='text-black'>({ratings})</span></p>
-                <p className='flex flex-nowrap items-center justify-center gap-1'><span className='text-green-400'><FaCheckCircle /></span> In Stock ({quantity}+ copies available)</p>
+                <p className='flex flex-nowrap items-center justify-center gap-1 text-yellow-600'>
+                    <FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt />
+                    <span className='text-black'>({ratings})</span>
+                </p>
+                <p className='flex flex-nowrap items-center justify-center gap-1'>
+                    <span className='text-green-400'><FaCheckCircle /></span>
+                    <span>In Stock ({quantity}+ copies available)</span>
+                </p>
                 <button className='text-blue-400 mt-2'>Stock Update</button>
             </div>
         </div>
