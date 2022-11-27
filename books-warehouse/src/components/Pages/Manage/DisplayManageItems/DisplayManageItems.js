@@ -15,7 +15,7 @@ const DisplayManageItems = ({ book }) => {
             <td>{name}</td>
             <td>{author}</td>
             <td title={description} className='text-justify'>{description.length > 200 ? description.slice(0, 100) + "..." : description}</td>
-            <td>{price}</td>
+            <td>${price}</td>
             <td>{ratings}</td>
             <td>{quantity}</td>
             <td>{supplier_name}</td>

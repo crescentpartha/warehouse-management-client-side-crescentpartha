@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useBooks from '../../../../hooks/useBooks';
 import DisplayManageItems from '../DisplayManageItems/DisplayManageItems';
 
@@ -6,7 +7,7 @@ const ManageItems = () => {
     const [books] = useBooks();
     return (
         <div className='p-5 my-5 border-bottom w-screen'>
-            <h2 className='text-4xl sm:text-5xl font-semibold uppercase pb-10'>Manage Items</h2>
+            <h2 className='text-4xl sm:text-5xl font-normal uppercase pb-10'>Manage Items</h2>
             <div className='mx-1 sm:mx-5 overflow-auto drop-shadow-sm'>
                 <table className='border-2 xl:w-full' width='1280px'>
                     <thead className='bg-gray-50 border-b-2'>
@@ -31,6 +32,9 @@ const ManageItems = () => {
                         }
                     </tbody>
                 </table>
+            </div>
+            <div className='mb-5 mt-10'>
+                <Link className='bg-blue-700 hover:bg-blue-600 px-5 py-2 rounded text-white' to='/add-item'>Add Items</Link>
             </div>
         </div>
     );

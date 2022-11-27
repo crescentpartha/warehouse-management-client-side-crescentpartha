@@ -10,7 +10,7 @@ const Item = ({ book }) => {
                 <h2 className='font-semibold'>{name}</h2>
                 <p><span className='italic'>{author}</span> (Author)</p>
                 <p>Publisher: <span className='italic'>{supplier_name}</span></p>
-                <p className='font-bold text-yellow-600'>{price}</p>
+                <p className='font-bold text-yellow-600'>${price}</p>
                 <p className='flex flex-nowrap items-center justify-center gap-1 text-yellow-600'>
                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt />
                     <span className='text-black'>({ratings})</span>
