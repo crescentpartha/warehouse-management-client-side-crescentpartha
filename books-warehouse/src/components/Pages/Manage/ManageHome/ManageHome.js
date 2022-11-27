@@ -1,9 +1,10 @@
 import React from 'react';
+import ManageItems from '../ManageItems/ManageItems';
 
 const ManageHome = () => {
     return (
         <div>
-            <h2>Manage Home</h2>
+            <ManageItems></ManageItems>
         </div>
     );
 };
