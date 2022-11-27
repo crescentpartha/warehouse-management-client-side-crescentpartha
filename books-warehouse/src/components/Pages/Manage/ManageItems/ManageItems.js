@@ -10,9 +10,11 @@ const ManageItems = () => {
             <div className='mx-5'>
                 <table className='table-auto md:table-fixed overflow-x-scroll'>
                     <thead className='bg-gray-50 border-b-2'>
-                        <tr className='grid grid-cols-7 gap-4 text-left'>
+                        <tr className='grid grid-cols-9 gap-4 text-left py-4'>
+                            <th className='ml-4'>Image</th>
                             <th>Name</th>
                             <th>Author</th>
+                            <th>Description</th>
                             <th>Price</th>
                             <th>Ratings</th>
                             <th>Quantity</th>
