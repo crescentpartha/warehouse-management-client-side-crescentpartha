@@ -7,8 +7,8 @@ const ManageItems = () => {
     return (
         <div className='p-5 my-5 border-bottom w-screen'>
             <h2 className='text-4xl sm:text-5xl font-semibold uppercase pb-10'>Manage Items</h2>
-            <div className='mx-5'>
-                <table className='table-auto md:table-fixed overflow-x-scroll'>
+            <div className='mx-1 sm:mx-5 overflow-auto drop-shadow-sm'>
+                <table className='border-2 xl:w-full' width='1280px'>
                     <thead className='bg-gray-50 border-b-2'>
                         <tr className='grid grid-cols-9 gap-4 text-left py-4'>
                             <th className='ml-4'>Image</th>
@@ -22,7 +22,7 @@ const ManageItems = () => {
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='divide-y'>
                         {
                             books.map(book => <DisplayManageItems
                                 key={book._id}

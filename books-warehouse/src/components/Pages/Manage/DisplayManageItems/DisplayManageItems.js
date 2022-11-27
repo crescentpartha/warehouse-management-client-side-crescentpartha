@@ -10,7 +10,7 @@ const DisplayManageItems = ({ book }) => {
 
     }
     return (
-        <tr className='grid grid-cols-9 gap-4 items-center justify-items-start text-start border-b-2 py-1'>
+        <tr className='grid grid-cols-9 gap-4 items-center justify-items-start text-start py-1'>
             <td><img className='w-full p-4' src={img} alt={name} /></td>
             <td>{name}</td>
             <td>{author}</td>
@@ -28,7 +28,7 @@ const DisplayManageItems = ({ book }) => {
                 >
                     {
                         hoverEffect === true 
-                        ? <FaTrashAlt className='text-xl m-3 text-gray-300' />
+                        ? <FaTrashAlt className='text-xl m-3 text-gray-100' />
                         : <FaTrashAlt className='text-xl m-3 text-red-400' />
                     }
                 </button>
