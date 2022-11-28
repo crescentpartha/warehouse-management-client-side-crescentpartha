@@ -41,7 +41,7 @@ const AddItemsHome = () => {
                             type="text"
                             {...register("name", {
                                 required: "Name is required",
-                                maxLength: 20,
+                                maxLength: 30,
                                 pattern: {
                                     value: /^[A-Za-z]+$/i,
                                     message: 'Name is invalid'
@@ -61,7 +61,7 @@ const AddItemsHome = () => {
                             type="text"
                             {...register("author", {
                                 required: "Author is required",
-                                maxLength: 20,
+                                maxLength: 30,
                                 pattern: {
                                     value: /^[A-Za-z]+$/i,
                                     message: 'Author is invalid'
@@ -81,7 +81,7 @@ const AddItemsHome = () => {
                             type="text"
                             {...register("supplier_name", {
                                 required: "Supplier Name is required",
-                                maxLength: 20,
+                                maxLength: 40,
                                 pattern: {
                                     value: /^[A-Za-z]+$/i,
                                     message: 'Supplier Name is invalid'
@@ -182,7 +182,7 @@ const AddItemsHome = () => {
                             rows="3"
                             {...register("description", {
                                 required: "Description is required",
-                                maxLength: 200,
+                                maxLength: 1000,
                                 pattern: {
                                     value: /^(?=.*[a-z])(?=.*[A-Z])/,
                                     message: "At least one [a-z][A-Z] from each categories"
