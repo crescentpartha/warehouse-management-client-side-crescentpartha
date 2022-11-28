@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import useBooks from '../../../../hooks/useBooks';
 
 const DisplayManageItems = ({ book }) => {
@@ -29,6 +31,10 @@ const DisplayManageItems = ({ book }) => {
                     setBooks(remaining);
                 } 
             });
+            toast('Successfully delete a book item.');
+        }
+        else {
+            toast('Thanks for your consideration.');
         }
     }
 
@@ -56,6 +62,7 @@ const DisplayManageItems = ({ book }) => {
                     }
                 </button>
             </td>
+            <ToastContainer />
         </tr>
     );
 };
