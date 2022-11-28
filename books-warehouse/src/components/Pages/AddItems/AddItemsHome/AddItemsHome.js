@@ -1,11 +1,28 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 const AddItemsHome = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const navigate = useNavigate();
 
     const onSubmit = (data) => {
-        console.log(data);
+        // console.log(data);
+
+        // POST a book data from client-side to server-side
+        const url = `http://localhost:5000/book`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result => {
+            console.log(result);
+        });
+        navigate('/manage');
     }
 
     return (

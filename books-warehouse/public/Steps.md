@@ -7,6 +7,7 @@
     - [`Project Setup 03 (Design Blogs Sections)`](#project-setup-03-design-blogs-sections)
     - [`Project Setup 04 (Firebase Deploy & Authentication)`](#project-setup-04-firebase-deploy--authentication)
       - [`Some Errors and/or Solutions`](#some-errors-andor-solutions)
+    - [`Project Setup 05 (Client-with-Server-API)`](#project-setup-05-client-with-server-api)
 
 # Books Warehouse
 
@@ -45,6 +46,10 @@
 
 - Create components such as `BlogsHome`, `JavascriptVsNode`, `NodeVsMongo`, `SqlVsNoSql`, `Jwt`, `CustomLink`, `CustomLinkTag`.
 - Implement the `dynamic routing` for the Blogs post.
+  - [Dynamic routing for the Blogs post using Tailwind-CSS](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-crescentpartha/blob/main/books-warehouse/src/components/Pages/Blogs/BlogsHome/BlogsHome.js)
+  - [Dynamic routing for the Admin panel using React-Bootstrap](https://github.com/crescentpartha/Volunteer-Network/blob/main/volunteer-network/src/components/Admin/Admin/Admin.js)
+  - [Dynamic routing for the PythonHome using React-Bootstrap](https://github.com/crescentpartha/Bangla-EdTech-Resources/blob/main/bangla-resources/src/components/Pages/Python/pythonHome/PythonHome.js)
+  - [Dynamic routing for the CHome using React-Bootstrap](https://github.com/crescentpartha/Bangla-EdTech-Resources/blob/main/bangla-resources/src/components/Pages/C/CHome/CHome.js)
 - `CustomLink` ___(Active Link)___ added for Blogs' ___Recent Post___ navigation section.
 - `CustomLinkTag` ___(Active Link)___ added for Blogs' ___Tag___ navigation section.
 - `JavaScript Vs Nodejs` blog post added
@@ -80,5 +85,23 @@
 - [Bug: too hard to fix "Cannot update a component from inside the function body of a different component."](https://github.com/facebook/react/issues/18178#issuecomment-595846312)
 - [Firebase Error: auth/invalid-api-key, Your API key is invalid, please check you have copied it correctly](https://github.com/firebase/quickstart-js/issues/61#issuecomment-1327236639) (My Comment)
 - [Firebase invalid api key error in console](https://stackoverflow.com/questions/54636324/firebase-invalid-api-key-error-in-console)
+
+**[🔼Back to Top](#table-of-contents)**
+
+### `Project Setup 05 (Client-with-Server-API)`
+
+- [Basic Server Setup Steps](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone11/module66.5-CRUD-Update-and-Product-Management/04crud-product-management.md#basic-server-setup-steps)
+  - [Conditional CSS Rendering for Hover Effect (Service)](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-crescentpartha/blob/main/books-warehouse/src/components/Pages/Home/Services/Service.js)
+  - [Conditional CSS Rendering for Hover Effect (DisplayManageItems)](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-crescentpartha/blob/main/books-warehouse/src/components/Pages/Manage/DisplayManageItems/DisplayManageItems.js)
+- [Connect to database with secure password on environment variable](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone11/module66.5-CRUD-Update-and-Product-Management/04crud-product-management.md#connect-to-database-with-secure-password-on-environment-variable)
+- [Load all products from database by creating a product API of get method](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone11/module66.5-CRUD-Update-and-Product-Management/04crud-product-management.md#load-all-products-from-database-by-creating-a-product-api-of-get-method)
+  - [Dynamic responsive Table in the React project with React-Bootstrap (VolunteerRegisterList)](https://github.com/crescentpartha/Volunteer-Network/tree/main/volunteer-network/src/components/Admin/VolunteerRegisterList)
+  - [Dynamic responsive Table in the React project with Tailwind-CSS (Manage)](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-crescentpartha/tree/main/books-warehouse/src/components/Pages/Manage)
+- [Insert a Product data to the MongoDb Cloud Database](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone11/module66.5-CRUD-Update-and-Product-Management/04crud-product-management.md#insert-a-product-data-to-the-mongodb-cloud-database)
+  - [Create a form using react-hook-form in the AddProducts component (without error message)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone11/module66.5-CRUD-Update-and-Product-Management/04crud-product-management.md#create-a-form-using-react-hook-form-in-the-addproducts-component)
+  - [Create a form using react-hook-form in the AddEvent component (without error message)](https://github.com/crescentpartha/Volunteer-Network/blob/main/volunteer-network/src/components/Admin/AddEvent/AddEvent.js)
+  - [Create a form using react-hook-form in the Register component (with display error message)](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-crescentpartha/blob/main/books-warehouse/src/components/Authentication/Register/Register.js)
+  - [Create a form using react-hook-form in the AddItemsHome component (with display error message)](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-crescentpartha/blob/main/books-warehouse/src/components/Pages/AddItems/AddItemsHome/AddItemsHome.js)
+- [Manage Products and Explore DELETE API](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone11/module66.5-CRUD-Update-and-Product-Management/04crud-product-management.md#manage-products-and-explore-delete-api)
 
 **[🔼Back to Top](#table-of-contents)**
