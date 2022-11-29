@@ -11,6 +11,7 @@ import Jwt from './components/Pages/Blogs/Jwt/Jwt';
 import NodeVsMongo from './components/Pages/Blogs/NodeVsMongo/NodeVsMongo';
 import SqlVsNoSql from './components/Pages/Blogs/SqlVsNoSql/SqlVsNoSql';
 import Home from './components/Pages/Home/Home/Home';
+import ItemDetail from './components/Pages/Home/InventoryItems/ItemDetail/ItemDetail';
 import ManageHome from './components/Pages/Manage/ManageHome/ManageHome';
 import MyItemsHome from './components/Pages/MyItems/MyItemsHome/MyItemsHome';
 import Footer from './components/SharedPages/Footer/Footer';
@@ -27,6 +28,11 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/retrieve-password' element={<RetrievePassword></RetrievePassword>}></Route>
+        <Route path='/bookItem/:itemDetailId' element={
+          <RequireAuth>
+            <ItemDetail></ItemDetail>
+          </RequireAuth>
+        }></Route>
         <Route path='/manage' element={
           <RequireAuth>
             <ManageHome></ManageHome>
