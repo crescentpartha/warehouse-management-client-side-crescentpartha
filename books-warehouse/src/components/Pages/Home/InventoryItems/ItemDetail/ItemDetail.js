@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
@@ -8,12 +8,34 @@ const ItemDetail = () => {
     const { itemDetailId } = useParams();
     const [book] = useLoadSingleBookItem(itemDetailId);
     // console.log(book);
-    const { name, author, description, img, price, quantity, ratings, supplier_name } = book;
+    let { name, author, description, img, price, quantity, ratings, supplier_name } = book;
     const { register, handleSubmit, formState: { errors } } = useForm();
+    // console.log(quantity);
+    const [bookQuantity, setBookQuantity] = useState(0);
+    // console.log(bookQuantity);
 
-    const onSubmit = (data) => {
+    const handleDelivered = () => {
+        setBookQuantity(quantity - 1);
+        const data = {
+            name: name,
+            author: author,
+            description: description,
+            img: img,
+            price: price,
+            quantity: bookQuantity,
+            ratings: ratings,
+            supplier_name: supplier_name
+        }
         console.log(data);
     }
+
+    const onSubmit = (restock) => {
+        console.log(restock);
+        setBookQuantity(quantity + parseInt(restock?.quantity));
+
+    }
+    // console.log(quantity);
+    // console.log(bookQuantity);
 
     return (
         <div className='py-4 sm:py-10 px-4 sm:px-10'>
@@ -22,7 +44,7 @@ const ItemDetail = () => {
                     <div className='bg-gray-100 rounded hover:bg-gray-200'>
                         <img className='mx-auto px-2 py-5 md:py-2' src={img} alt={name} />
                     </div>
-                    <button className='bg-blue-700 hover:bg-blue-600 px-5 py-2 my-5 rounded inline-block mx-auto text-white'>Delivered</button>
+                    <button onClick={() => handleDelivered()} className='bg-blue-700 hover:bg-blue-600 px-5 py-2 my-5 rounded inline-block mx-auto text-white'>Delivered</button>
                 </div>
                 <div className='md:col-span-8 bg-gray-100 rounded text-start p-4'>
                     <h2 className='font-semibold capitalize text-green-500'>{name}</h2>

@@ -11,7 +11,7 @@ const ManageItems = () => {
             <div className='mx-1 sm:mx-5 overflow-auto drop-shadow-sm'>
                 <table className='border-2 xl:w-full' width='1280px'>
                     <thead className='bg-gray-50 border-b-2'>
-                        <tr className='grid grid-cols-9 gap-4 text-left py-4'>
+                        <tr className='grid grid-cols-10 gap-4 text-left py-4'>
                             <th className='ml-4'>Image</th>
                             <th>Name</th>
                             <th>Author</th>
@@ -20,6 +20,7 @@ const ManageItems = () => {
                             <th>Ratings</th>
                             <th>Quantity</th>
                             <th>Supplier Name</th>
+                            <th>Stock Update</th>
                             <th>Action</th>
                         </tr>
                     </thead>
