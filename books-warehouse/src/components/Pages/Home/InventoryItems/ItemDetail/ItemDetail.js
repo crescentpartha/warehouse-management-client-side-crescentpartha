@@ -41,7 +41,7 @@ const ItemDetail = () => {
     const onSubmit = (restock) => {
         // console.log(restock);
         const data = {
-            quantity: quantity + parseInt(restock.quantity)
+            quantity: parseInt(quantity) + parseInt(restock.quantity)
         }
         // console.log(data);
 
