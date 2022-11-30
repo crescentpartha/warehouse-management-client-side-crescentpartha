@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import useLoadSingleBookItem from '../../../../../hooks/useLoadSingleBookItem';
 
 const ItemDetail = () => {
@@ -10,32 +12,36 @@ const ItemDetail = () => {
     // console.log(book);
     let { name, author, description, img, price, quantity, ratings, supplier_name } = book;
     const { register, handleSubmit, formState: { errors } } = useForm();
-    // console.log(quantity);
-    const [bookQuantity, setBookQuantity] = useState(0);
-    // console.log(bookQuantity);
 
-    const handleDelivered = () => {
-        setBookQuantity(quantity - 1);
+    const handleDelivered = (id) => {
         const data = {
-            name: name,
-            author: author,
-            description: description,
-            img: img,
-            price: price,
-            quantity: bookQuantity,
-            ratings: ratings,
-            supplier_name: supplier_name
+            quantity: quantity-1
         }
-        console.log(data);
-    }
+        // console.log(data);
+        const proceed = window.confirm('Are you sure want to buy this book?');
+        if (proceed) {
+            // Update a book item in the client-side and send to the server-side
+            const url = `http://localhost:5000/book/${id}`;
+            // console.log(url, id);
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(result => {
+                // console.log('success', result);
+                toast('Book order successfully done!!!');
+            });
+        }
+    };
 
     const onSubmit = (restock) => {
         console.log(restock);
-        setBookQuantity(quantity + parseInt(restock?.quantity));
-
+        // setBookQuantity(quantity + parseInt(restock?.quantity));
     }
-    // console.log(quantity);
-    // console.log(bookQuantity);
 
     return (
         <div className='py-4 sm:py-10 px-4 sm:px-10'>
@@ -44,7 +50,7 @@ const ItemDetail = () => {
                     <div className='bg-gray-100 rounded hover:bg-gray-200'>
                         <img className='mx-auto px-2 py-5 md:py-2' src={img} alt={name} />
                     </div>
-                    <button onClick={() => handleDelivered()} className='bg-blue-700 hover:bg-blue-600 px-5 py-2 my-5 rounded inline-block mx-auto text-white'>Delivered</button>
+                    <button onClick={() => handleDelivered(book._id)} className='bg-blue-700 hover:bg-blue-600 px-5 py-2 my-5 rounded inline-block mx-auto text-white'>Delivered</button>
                 </div>
                 <div className='md:col-span-8 bg-gray-100 rounded text-start p-4'>
                     <h2 className='font-semibold capitalize text-green-500'>{name}</h2>
@@ -95,6 +101,7 @@ const ItemDetail = () => {
                     </div>
                 </form>
             </div>
+            <ToastContainer />
         </div>
     );
 };
