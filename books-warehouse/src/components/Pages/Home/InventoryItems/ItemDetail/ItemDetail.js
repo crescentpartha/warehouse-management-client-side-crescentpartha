@@ -39,8 +39,27 @@ const ItemDetail = () => {
     };
 
     const onSubmit = (restock) => {
-        console.log(restock);
-        // setBookQuantity(quantity + parseInt(restock?.quantity));
+        // console.log(restock);
+        const data = {
+            quantity: quantity + parseInt(restock.quantity)
+        }
+        // console.log(data);
+
+        // Update a book item in the client-side and send to the server-side
+        const url = `http://localhost:5000/book/${itemDetailId}`;
+            // console.log(url, id);
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(result => {
+                // console.log('success', result);
+                toast('Restock the book item is successfully done!!!');
+            });
     }
 
     return (
@@ -82,7 +101,7 @@ const ItemDetail = () => {
                                     required: "Quantity is required",
                                     maxLength: 8,
                                     pattern: {
-                                        value: /^[0-9]*$/,
+                                        value: /^[1-9]*$/,
                                         message: 'Quantity is invalid'
                                     }
                                 })}
