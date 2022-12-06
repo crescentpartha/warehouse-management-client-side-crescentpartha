@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import useLoadSingleBookItem from '../../../../../hooks/useLoadSingleBookItem';
 import auth from '../../../../../firebase.init';
 import useOrders from '../../../../../hooks/useOrders';
-import useLoadSingleOrderedBookItems from '../../../../../hooks/useLoadSingleOrderedBookItem';
 
 const ItemDetail = () => {
     const { itemDetailId } = useParams();
@@ -17,13 +16,6 @@ const ItemDetail = () => {
 
     const [orders] = useOrders();
     // console.log(orders);
-
-    /* const allOrdersForThisProductEmail = orders.find(orderData => (orderData.oldId === itemDetailId && orderData.email === user.email));
-    // const { _id: orderId } = allOrdersForThisProductEmail;
-    // const orderId = allOrdersForThisProductEmail._id;
-    // console.log(allOrdersForThisProductEmail._id);
-    const [order] = useLoadSingleOrderedBookItems(allOrdersForThisProductEmail?._id);
-    console.log(order); */
 
     const [book] = useLoadSingleBookItem(itemDetailId);
     // console.log(book);
@@ -52,12 +44,6 @@ const ItemDetail = () => {
         }
         // console.log(orderData);
 
-        // Update existing ordered book data from client-side to server-side for orderCollection
-        // const orderDataUpdate = {
-        //     quantity: 1
-        // }
-        // console.log(orderDataUpdate);
-
         const proceed = window.confirm('Are you sure want to buy this book?');
         if (proceed) {
             // Update a book item in the client-side and send to the server-side for bookCollection
@@ -78,19 +64,43 @@ const ItemDetail = () => {
 
             /* ------------------------------------------------- */
 
-            // POST a ordered book data from client-side to server-side for orderCollection
-            const url2 = `http://localhost:5000/order`;
-            fetch(url2, {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(orderData)
-            })
-                .then(res => res.json())
-                .then(result => {
-                    // console.log(result);
+            const allOrdersForThisProductAndEmail = orders?.find(orderData => (orderData?.oldId === itemDetailId && orderData?.email === user.email));
+            if (allOrdersForThisProductAndEmail) {
+                // Update existing ordered book data from client-side to server-side for orderCollection
+                const orderDataUpdate = {
+                    quantity: allOrdersForThisProductAndEmail.quantity + 1
+                }
+                // console.log(allOrdersForThisProductAndEmail.quantity, allOrdersForThisProductAndEmail._id, orderDataUpdate);
+
+                const url = `http://localhost:5000/order/${allOrdersForThisProductAndEmail._id}`;
+                // console.log(url, id);
+                fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(orderDataUpdate)
                 })
+                    .then(res => res.json())
+                    .then(result => {
+                        // console.log('success', result);
+                    });
+            }
+            else {
+                // POST a ordered book data from client-side to server-side for orderCollection
+                const url2 = `http://localhost:5000/order`;
+                fetch(url2, {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(orderData)
+                })
+                    .then(res => res.json())
+                    .then(result => {
+                        // console.log(result);
+                    })
+            }
         }
     };
 

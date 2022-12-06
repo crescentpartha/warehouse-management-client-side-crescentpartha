@@ -112,5 +112,10 @@
 - Insert ordered book data from client-side to server-side to database
   - [Insert a Product data to the MongoDb Cloud Database](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone11/module66.5-CRUD-Update-and-Product-Management/04crud-product-management.md#insert-a-product-data-to-the-mongodb-cloud-database)
   - [ItemDetail.js](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-crescentpartha/blob/main/books-warehouse/src/components/Pages/Home/InventoryItems/ItemDetail/ItemDetail.js)
+- Update existing ordered book data from client-side to server-side for orderCollection
+  - Create a Custom hooks with dependency to load all orders book data from orderCollection (`useOrders.js`)
+  - Create a Custom hooks with dependency to load a particular orders book data from orderCollection (`useLoadSingleOrderedBookItem.js`)
+  - [Update a single product info according to id](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone11/module66.5-CRUD-Update-and-Product-Management/04crud-product-management.md#update-a-single-product-info-according-to-id)
+  - [ItemDetail.js](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-crescentpartha/blob/main/books-warehouse/src/components/Pages/Home/InventoryItems/ItemDetail/ItemDetail.js)
 
 **[🔼Back to Top](#table-of-contents)**
