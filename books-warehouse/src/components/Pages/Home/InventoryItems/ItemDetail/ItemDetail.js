@@ -1,12 +1,16 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useLoadSingleBookItem from '../../../../../hooks/useLoadSingleBookItem';
+import auth from '../../../../../firebase.init';
 
 const ItemDetail = () => {
+    const [user] = useAuthState(auth);
+    // console.log(user.email);
     const { itemDetailId } = useParams();
     const [book] = useLoadSingleBookItem(itemDetailId);
     // console.log(book);
@@ -14,13 +18,30 @@ const ItemDetail = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const handleDelivered = (id) => {
+        // Update existing book data from client-side to server-side for bookCollection
         const data = {
             quantity: quantity-1
         }
         // console.log(data);
+
+        // Insert ordered book data from client-side to server-side for orderCollection
+        const orderData = {
+            oldId: itemDetailId,
+            name: name,
+            author: author,
+            email: user.email,
+            description: description,
+            img: img,
+            price: price,
+            quantity: 1,
+            ratings: ratings,
+            supplier_name: supplier_name
+        }
+        // console.log(orderData);
+
         const proceed = window.confirm('Are you sure want to buy this book?');
         if (proceed) {
-            // Update a book item in the client-side and send to the server-side
+            // Update a book item in the client-side and send to the server-side for bookCollection
             const url = `http://localhost:5000/book/${id}`;
             // console.log(url, id);
             fetch(url, {
@@ -35,6 +56,22 @@ const ItemDetail = () => {
                 // console.log('success', result);
                 toast('Book order successfully done!!!');
             });
+
+            /* ------------------------------------------------- */
+
+            // POST a ordered book data from client-side to server-side for orderCollection
+            const url2 = `http://localhost:5000/order`;
+            fetch(url2, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(orderData)
+            })
+            .then(res => res.json())
+            .then(result => {
+                // console.log(result);
+            })
         }
     };
 
