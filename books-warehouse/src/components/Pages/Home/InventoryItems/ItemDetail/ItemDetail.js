@@ -8,13 +8,23 @@ import 'react-toastify/dist/ReactToastify.css';
 import useLoadSingleBookItem from '../../../../../hooks/useLoadSingleBookItem';
 import auth from '../../../../../firebase.init';
 import useOrders from '../../../../../hooks/useOrders';
+import useLoadSingleOrderedBookItems from '../../../../../hooks/useLoadSingleOrderedBookItem';
 
 const ItemDetail = () => {
+    const { itemDetailId } = useParams();
     const [user] = useAuthState(auth);
     // console.log(user.email);
-    const { itemDetailId } = useParams();
+
     const [orders] = useOrders();
     // console.log(orders);
+
+    /* const allOrdersForThisProductEmail = orders.find(orderData => (orderData.oldId === itemDetailId && orderData.email === user.email));
+    // const { _id: orderId } = allOrdersForThisProductEmail;
+    // const orderId = allOrdersForThisProductEmail._id;
+    // console.log(allOrdersForThisProductEmail._id);
+    const [order] = useLoadSingleOrderedBookItems(allOrdersForThisProductEmail?._id);
+    console.log(order); */
+
     const [book] = useLoadSingleBookItem(itemDetailId);
     // console.log(book);
     let { name, author, description, img, price, quantity, ratings, supplier_name } = book;
@@ -23,7 +33,7 @@ const ItemDetail = () => {
     const handleDelivered = (id) => {
         // Update existing book data from client-side to server-side for bookCollection
         const data = {
-            quantity: quantity-1
+            quantity: quantity - 1
         }
         // console.log(data);
 
@@ -42,6 +52,12 @@ const ItemDetail = () => {
         }
         // console.log(orderData);
 
+        // Update existing ordered book data from client-side to server-side for orderCollection
+        // const orderDataUpdate = {
+        //     quantity: 1
+        // }
+        // console.log(orderDataUpdate);
+
         const proceed = window.confirm('Are you sure want to buy this book?');
         if (proceed) {
             // Update a book item in the client-side and send to the server-side for bookCollection
@@ -54,11 +70,11 @@ const ItemDetail = () => {
                 },
                 body: JSON.stringify(data)
             })
-            .then(res => res.json())
-            .then(result => {
-                // console.log('success', result);
-                toast('Book order successfully done!!!');
-            });
+                .then(res => res.json())
+                .then(result => {
+                    // console.log('success', result);
+                    toast('Book order successfully done!!!');
+                });
 
             /* ------------------------------------------------- */
 
@@ -71,10 +87,10 @@ const ItemDetail = () => {
                 },
                 body: JSON.stringify(orderData)
             })
-            .then(res => res.json())
-            .then(result => {
-                // console.log(result);
-            })
+                .then(res => res.json())
+                .then(result => {
+                    // console.log(result);
+                })
         }
     };
 
@@ -87,14 +103,14 @@ const ItemDetail = () => {
 
         // Update a book item in the client-side and send to the server-side
         const url = `http://localhost:5000/book/${itemDetailId}`;
-            // console.log(url, id);
-            fetch(url, {
-                method: 'PUT',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
+        // console.log(url, id);
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
             .then(res => res.json())
             .then(result => {
                 // console.log('success', result);
