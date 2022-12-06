@@ -7,11 +7,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useLoadSingleBookItem from '../../../../../hooks/useLoadSingleBookItem';
 import auth from '../../../../../firebase.init';
+import useOrders from '../../../../../hooks/useOrders';
 
 const ItemDetail = () => {
     const [user] = useAuthState(auth);
     // console.log(user.email);
     const { itemDetailId } = useParams();
+    const [orders] = useOrders();
+    // console.log(orders);
     const [book] = useLoadSingleBookItem(itemDetailId);
     // console.log(book);
     let { name, author, description, img, price, quantity, ratings, supplier_name } = book;
