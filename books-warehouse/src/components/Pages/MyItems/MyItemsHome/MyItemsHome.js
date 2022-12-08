@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import useLoadEmailOrderedBooks from '../../../../hooks/useLoadEmailOrderedBooks';
 import DisplayMyItems from '../DisplayMyItems/DisplayMyItems';
@@ -34,9 +33,6 @@ const MyItemsHome = () => {
                         }
                     </tbody>
                 </table>
-            </div>
-            <div className='mb-5 mt-10'>
-                <Link className='bg-blue-700 hover:bg-blue-600 px-5 py-2 rounded text-white' to='/add-item'>Add Items</Link>
             </div>
         </div>
     );

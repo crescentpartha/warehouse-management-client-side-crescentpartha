@@ -121,5 +121,8 @@
   - [index.js](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-crescentpartha/blob/main/index.js)
   - Create a custom hooks call `useLoadEmailOrderedBook.js`
   - Display Ordered Books data on `DisplayMyItems.js` and `MyItemsHome.js`
+- DELETE a Particular ordered book data from MyItems
+  - DELETE a Particular ordered book data from client-side (`DisplayMyItems.js`) and send to the server-side
+  - DELETE a Particular ordered book data from server-side (`index.js`) to database for orderCollection
 
 **[🔼Back to Top](#table-of-contents)**
