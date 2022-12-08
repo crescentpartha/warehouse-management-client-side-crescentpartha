@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useOrders from '../../../../hooks/useOrders';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import useLoadEmailOrderedBooks from '../../../../hooks/useLoadEmailOrderedBooks';
 import DisplayMyItems from '../DisplayMyItems/DisplayMyItems';
+import auth from '../../../../firebase.init';
 
 const MyItemsHome = () => {
-    const [orders] = useOrders();
+    const [user] = useAuthState(auth);
+    // console.log(user.email);
+    const [emailOrders] = useLoadEmailOrderedBooks(user.email);
     return (
         <div className='p-5 my-5 border-bottom w-screen'>
             <h2 className='text-4xl sm:text-5xl font-normal uppercase pb-10'>My Items</h2>
@@ -23,7 +27,7 @@ const MyItemsHome = () => {
                     </thead>
                     <tbody className='divide-y'>
                         {
-                            orders.map(order => <DisplayMyItems
+                            emailOrders?.map(order => <DisplayMyItems
                                 key={order._id}
                                 order={order}
                             ></DisplayMyItems>)
