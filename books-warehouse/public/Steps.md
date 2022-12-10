@@ -8,6 +8,7 @@
     - [`Project Setup 04 (Firebase Deploy & Authentication)`](#project-setup-04-firebase-deploy--authentication)
       - [`Some Errors and/or Solutions`](#some-errors-andor-solutions)
     - [`Project Setup 05 (Client-with-Server-API)`](#project-setup-05-client-with-server-api)
+    - [`Project Setup 06`](#project-setup-06)
 
 # Books Warehouse
 
@@ -124,5 +125,13 @@
 - DELETE a Particular ordered book data from MyItems
   - DELETE a Particular ordered book data from client-side (`DisplayMyItems.js`) and send to the server-side
   - DELETE a Particular ordered book data from server-side (`index.js`) to database for orderCollection
+
+**[🔼Back to Top](#table-of-contents)**
+
+### `Project Setup 06`
+
+- Introduction to Protected Route and Require Auth
+  - [Introduction to Protected Route and Require Auth](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#618-introduction-to-protected-route-and-require-auth)
+  - [Implement Authentication Redirect](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#implement-authentication-redirect-step-03)
 
 **[🔼Back to Top](#table-of-contents)**
