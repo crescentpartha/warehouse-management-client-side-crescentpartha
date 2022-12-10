@@ -29,19 +29,19 @@ const Header = () => {
                 <nav className={`${open ? "block" : "hidden"} lg:flex lg:items-center lg:w-auto w-full`}>
                     <ul className='lg:flex lg:items-center lg:justify-between text-base text-gray-700'>
                         <li>
-                            <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/home">Home</Link>
+                            <Link className='lg:px-5 py-2 font-semibold hover:text-blue-400 block' to="/home">Home</Link>
                         </li>
                         <li>
-                            <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/blogs/javascript-vs-node">Blogs</Link>
+                            <Link className='lg:px-5 py-2 font-semibold hover:text-blue-400 block' to="/blogs/javascript-vs-node">Blogs</Link>
                         </li>
                         <li>
-                            { user && <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/manage">Manage Items</Link> }
+                            { user && <Link className='lg:px-5 py-2 font-semibold hover:text-blue-400 block' to="/manage">Manage Items</Link> }
                         </li>
                         <li>
-                            { user && <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/add-item">Add Item</Link> }
+                            { user && <Link className='lg:px-5 py-2 font-semibold hover:text-blue-400 block' to="/add-item">Add Item</Link> }
                         </li>
                         <li>
-                            { user && <Link className='lg:px-5 py-2 font-semibold hover:text-blue-700 block' to="/my-items">My Items</Link> }
+                            { user && <Link className='lg:px-5 py-2 font-semibold hover:text-blue-400 block' to="/my-items">My Items</Link> }
                         </li>
                         <li>
                             {
