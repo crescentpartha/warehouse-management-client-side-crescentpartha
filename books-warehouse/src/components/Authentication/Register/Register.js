@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
@@ -12,18 +12,21 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate();
 
     if (user) {
-        navigate('/home');
+        // console.log('User', user);
     }
 
-    const onSubmit = data => {
-        const { email, password } = data;
+    const onSubmit = async (data) => {
+        const { name, email, password } = data;
         // console.log(data);
 
-        createUserWithEmailAndPassword(email, password);
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        navigate('/home');
     }
     // console.log(errors);
 
@@ -78,6 +81,12 @@ const Register = () => {
                 }
                 {
                     error && <p className='text-red-400'>{error.message}</p>
+                }
+                {
+                    updating && <p className='text-red-400'>Updating...</p>
+                }
+                {
+                    updateError && <p className='text-red-400'>{updateError.message}</p>
                 }
                 <p className='text-red-400'>{errors?.password?.message}</p>
                 <input
