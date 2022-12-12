@@ -1,12 +1,21 @@
 import React from 'react';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import auth from '../../../firebase.init';
 
 const RetrievePassword = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth);
 
-    const onSubmit = data => {
-        console.log(data);
+    const onSubmit = async (data) => {
+        // console.log(data);
+        const { email } = data;
+        await sendPasswordResetEmail(email);
+        toast('Sent an email to reset your Password');
+        // console.log('Sending email to reset password!');
     }
     // console.log(errors);
 
@@ -28,6 +37,12 @@ const RetrievePassword = () => {
                     })}
                 />
                 <p className='text-red-400'>{errors?.email?.message}</p>
+                {
+                    sending && <p className='text-red-400'>Sending...</p>
+                }
+                {
+                    error && <p className='text-red-400'>{error.message}</p>
+                }
                 <input
                     className='py-2 px-2 rounded bg-blue-500 hover:bg-blue-600 text-white font-semibold'
                     type="submit"
@@ -38,6 +53,7 @@ const RetrievePassword = () => {
                     <Link to='/register'>Register?</Link>
                 </p>
             </form>
+            <ToastContainer />
         </div>
     );
 };
