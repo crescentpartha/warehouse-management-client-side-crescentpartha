@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../../images/logo.png';
 import { FaBars } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
@@ -9,9 +9,11 @@ import { signOut } from 'firebase/auth';
 const Header = () => {
     const [open, setOpen] = useState(false);
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     const logout = () => {
         signOut(auth);
+        navigate('/login');
     }
 
     return (

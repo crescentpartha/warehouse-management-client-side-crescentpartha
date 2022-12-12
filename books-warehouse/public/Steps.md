@@ -135,5 +135,6 @@
   - [Implement Authentication Redirect](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#implement-authentication-redirect-step-03)
   - [Verify Email set display name and async await](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#627-advanced-verify-email-set-display-name-and-async-await)
   - [Show the Reset Password alert using React-Toastify](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#show-the-reset-password-alert-using-react-toastify)
+  - Navigate to login page after clicking `Sign Out` button
 
 **[🔼Back to Top](#table-of-contents)**
