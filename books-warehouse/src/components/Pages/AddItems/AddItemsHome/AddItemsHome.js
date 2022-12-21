@@ -43,7 +43,8 @@ const AddItemsHome = () => {
                                 required: "Name is required",
                                 maxLength: 30,
                                 pattern: {
-                                    value: /^[A-Za-z]+$/i,
+                                    // value: /^[A-Za-z]+$/i,
+                                    value: /^[A-Z]+((\s)?([A-Za-z])+)*$/,
                                     message: 'Name is invalid'
                                 }
                             })}
@@ -63,7 +64,8 @@ const AddItemsHome = () => {
                                 required: "Author is required",
                                 maxLength: 30,
                                 pattern: {
-                                    value: /^[A-Za-z]+$/i,
+                                    // value: /^[A-Za-z]+$/i,
+                                    value: /^[A-Z]+((\s)?([A-Za-z])+)*$/,
                                     message: 'Author is invalid'
                                 }
                             })}
