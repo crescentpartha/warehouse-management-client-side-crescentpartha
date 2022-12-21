@@ -8,7 +8,8 @@
     - [`Project Setup 04 (Firebase Deploy & Authentication)`](#project-setup-04-firebase-deploy--authentication)
       - [`Some Errors and/or Solutions`](#some-errors-andor-solutions)
     - [`Project Setup 05 (Client-with-Server-API)`](#project-setup-05-client-with-server-api)
-    - [`Project Setup 06`](#project-setup-06)
+    - [`Project Setup 06 (Protected Route and Require Auth)`](#project-setup-06-protected-route-and-require-auth)
+    - [`Project Setup 07 (Implement Pagination)`](#project-setup-07-implement-pagination)
 
 # Books Warehouse
 
@@ -128,7 +129,7 @@
 
 **[🔼Back to Top](#table-of-contents)**
 
-### `Project Setup 06`
+### `Project Setup 06 (Protected Route and Require Auth)`
 
 - Introduction to Protected Route and Require Auth
   - [Introduction to Protected Route and Require Auth](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#618-introduction-to-protected-route-and-require-auth)
@@ -136,5 +137,16 @@
   - [Verify Email set display name and async await](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#627-advanced-verify-email-set-display-name-and-async-await)
   - [Show the Reset Password alert using React-Toastify](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module61-react-router-and-firebase-auth-recap/02react-router-and-firebase-auth-recap.md#show-the-reset-password-alert-using-react-toastify)
   - Navigate to login page after clicking `Sign Out` button
+
+**[🔼Back to Top](#table-of-contents)**
+
+### `Project Setup 07 (Implement Pagination)`
+
+- [67.4 Introduction to pagination and pagination concept](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone08/module48-simple-react-SPA-with-simple-E-commerce/02ema-john-simple.md#674-introduction-to-pagination-and-pagination-concept)
+  - [Pagination and Load Data by filter](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone08/module48-simple-react-SPA-with-simple-E-commerce/02ema-john-simple.md#module-67-pagination-and-load-data-by-filter)
+- [67.5 get page count and Create pagination button](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone08/module48-simple-react-SPA-with-simple-E-commerce/02ema-john-simple.md#675-interesting-get-page-count-and-create-pagination-button)
+    - [product count: How many products have in the database (Fix deprecatedWarning)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone08/module48-simple-react-SPA-with-simple-E-commerce/02ema-john-simple.md#modified-code-product-count-how-many-products-have-in-the-database-fix-deprecatedwarning)
+- [67.6 Set Page and Size state and send search query to server](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone08/module48-simple-react-SPA-with-simple-E-commerce/02ema-john-simple.md#676-set-page-and-size-state-and-send-search-query-to-server)
+- [67.7 Load data based on the page number and size (no of products)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone08/module48-simple-react-SPA-with-simple-E-commerce/02ema-john-simple.md#677-interesting-load-data-based-on-the-page-number-and-size-no-of-products)
 
 **[🔼Back to Top](#table-of-contents)**

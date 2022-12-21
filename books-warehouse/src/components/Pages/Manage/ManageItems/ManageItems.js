@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import useBooks from '../../../../hooks/useBooks';
 import DisplayManageItems from '../DisplayManageItems/DisplayManageItems';
 
 const ManageItems = () => {
