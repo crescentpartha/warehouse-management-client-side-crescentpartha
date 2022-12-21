@@ -4,8 +4,16 @@ import useBooks from '../../../../hooks/useBooks';
 import DisplayManageItems from '../DisplayManageItems/DisplayManageItems';
 
 const ManageItems = () => {
-    const [books] = useBooks();
+    const [books, setBooks] = useState([]);
     const [pageCount, setPageCount] = useState(0);
+    const [currentPage, setCurrentPage] = useState(0);
+    const [productSize, setProductSize] = useState(5);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/book?currentPage=${currentPage}&productSize=${productSize}`)
+            .then(res => res.json())
+            .then(data => setBooks(data));
+    }, [currentPage, productSize]);
 
     useEffect( () => {
         fetch('http://localhost:5000/bookCount')
@@ -16,6 +24,7 @@ const ManageItems = () => {
             setPageCount(pages);
         })
     }, []);
+
     return (
         <div className='p-5 my-5 border-bottom w-screen'>
             <h2 className='text-4xl sm:text-5xl font-normal uppercase pb-10'>Manage Items</h2>
@@ -49,9 +58,23 @@ const ManageItems = () => {
                 {
                     [...Array(pageCount).keys()]
                     .map(number => <button 
-                        className='bg-gray-200 border-2 border-orange-300 rounded px-3 py-2 mx-1'
+                        onClick={() => setCurrentPage(number)}
+                        className={
+                            currentPage === number ? 'bg-orange-300 border-gray-200 text-gray-50 font-semibold border-2 rounded px-3 py-2 mx-1' 
+                            : 'bg-gray-200 border-orange-300 text-orange-300 border-2 rounded px-3 py-2 mx-1 font-semibold'
+                        }
                     >{number + 1}</button>)
                 }
+                <select 
+                    defaultValue={10} 
+                    onChange={e => setProductSize(e.target.value)} 
+                    className='bg-gray-200 border-orange-300 text-orange-300 border-2 rounded px-1 py-2 mx-1 font-semibold'
+                >
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
             </div>
             <div className='mb-5 mt-10'>
                 <Link className='bg-blue-700 hover:bg-blue-600 px-5 py-2 rounded text-white' to='/add-item'>Add Items</Link>
