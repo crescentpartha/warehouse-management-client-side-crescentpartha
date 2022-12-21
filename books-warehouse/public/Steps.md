@@ -148,5 +148,6 @@
     - [product count: How many products have in the database (Fix deprecatedWarning)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone08/module48-simple-react-SPA-with-simple-E-commerce/02ema-john-simple.md#modified-code-product-count-how-many-products-have-in-the-database-fix-deprecatedwarning)
 - [67.6 Set Page and Size state and send search query to server](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone08/module48-simple-react-SPA-with-simple-E-commerce/02ema-john-simple.md#676-set-page-and-size-state-and-send-search-query-to-server)
 - [67.7 Load data based on the page number and size (no of products)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone08/module48-simple-react-SPA-with-simple-E-commerce/02ema-john-simple.md#677-interesting-load-data-based-on-the-page-number-and-size-no-of-products)
+- [Fix the currentPage overflow error (line-26 | ManageItems.js)](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-crescentpartha/blob/main/books-warehouse/src/components/Pages/Manage/ManageItems/ManageItems.js)
 
 **[🔼Back to Top](#table-of-contents)**

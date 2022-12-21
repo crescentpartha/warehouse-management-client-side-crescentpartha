@@ -22,8 +22,11 @@ const ManageItems = () => {
             const count = data.count;
             const pages = Math.ceil(count/productSize);
             setPageCount(pages);
+            
+            // Fix the currentPage overflow error;
+            (currentPage >= pages) ? setCurrentPage(0) : setCurrentPage(currentPage)
         })
-    }, [productSize]);
+    }, [productSize, currentPage]);
 
     return (
         <div className='p-5 my-5 border-bottom w-screen'>
