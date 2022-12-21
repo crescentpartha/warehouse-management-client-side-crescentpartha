@@ -9,6 +9,7 @@ const ManageItems = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const [productSize, setProductSize] = useState(5);
 
+    // Load data based on the currentPage and productSize;
     useEffect(() => {
         fetch(`http://localhost:5000/book?currentPage=${currentPage}&productSize=${productSize}`)
             .then(res => res.json())
@@ -20,10 +21,10 @@ const ManageItems = () => {
         .then(res => res.json())
         .then(data => {
             const count = data.count;
-            const pages = Math.ceil(count/10);
+            const pages = Math.ceil(count/productSize);
             setPageCount(pages);
         })
-    }, []);
+    }, [productSize]);
 
     return (
         <div className='p-5 my-5 border-bottom w-screen'>
@@ -60,13 +61,13 @@ const ManageItems = () => {
                     .map(number => <button 
                         onClick={() => setCurrentPage(number)}
                         className={
-                            currentPage === number ? 'bg-orange-300 border-gray-200 text-gray-50 font-semibold border-2 rounded px-3 py-2 mx-1' 
+                            currentPage === number ? 'bg-orange-300 border-gray-300 text-gray-50 font-semibold border-2 rounded px-3 py-2 mx-1' 
                             : 'bg-gray-200 border-orange-300 text-orange-300 border-2 rounded px-3 py-2 mx-1 font-semibold'
                         }
                     >{number + 1}</button>)
                 }
                 <select 
-                    defaultValue={10} 
+                    defaultValue={5} 
                     onChange={e => setProductSize(e.target.value)} 
                     className='bg-gray-200 border-orange-300 text-orange-300 border-2 rounded px-1 py-2 mx-1 font-semibold'
                 >
