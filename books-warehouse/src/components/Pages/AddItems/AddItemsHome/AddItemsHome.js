@@ -41,7 +41,7 @@ const AddItemsHome = () => {
                             type="text"
                             {...register("name", {
                                 required: "Name is required",
-                                maxLength: 30,
+                                maxLength: 50,
                                 pattern: {
                                     // value: /^[A-Za-z]+$/i,
                                     value: /^[A-Z]+((\s)?([A-Za-z])+)*$/,
@@ -62,7 +62,7 @@ const AddItemsHome = () => {
                             type="text"
                             {...register("author", {
                                 required: "Author is required",
-                                maxLength: 30,
+                                maxLength: 50,
                                 pattern: {
                                     // value: /^[A-Za-z]+$/i,
                                     value: /^[A-Z]+((\s)?([A-Za-z])+)*$/,
@@ -83,7 +83,7 @@ const AddItemsHome = () => {
                             type="text"
                             {...register("supplier_name", {
                                 required: "Supplier Name is required",
-                                maxLength: 40,
+                                maxLength: 50,
                                 pattern: {
                                     value: /^[A-Za-z]+$/i,
                                     message: 'Supplier Name is invalid'
@@ -103,7 +103,7 @@ const AddItemsHome = () => {
                             type="text"
                             {...register("img", {
                                 required: "Image URL is required",
-                                maxLength: 60,
+                                maxLength: 300,
                                 pattern: {
                                     value: /^https?:\/\/.*\/.*\.(png|gif|webp|jpeg|jpg)\??.*$/gmi,
                                     message: 'Image URL is invalid'
