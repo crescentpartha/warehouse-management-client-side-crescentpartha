@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -19,14 +20,20 @@ const Login = () => {
     const from = location?.state?.from?.pathname || '/';
 
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
-    const onSubmit = data => {
-        const { email, password } = data;
-        // console.log(data);
+    const onSubmit = async data2 => {
+        const { email, password } = data2;
+        // console.log(data2);
 
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        
+        // Create JWT Token, Get jwt token on client side
+        const {data} = await axios.post('http://localhost:5000/login', {email});
+        // console.log(data);
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
     // console.log(errors);
 
