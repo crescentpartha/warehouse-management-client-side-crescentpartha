@@ -10,6 +10,7 @@
     - [`Project Setup 05 (Client-with-Server-API)`](#project-setup-05-client-with-server-api)
     - [`Project Setup 06 (Protected Route and Require Auth)`](#project-setup-06-protected-route-and-require-auth)
     - [`Project Setup 07 (Implement Pagination)`](#project-setup-07-implement-pagination)
+    - [`Project Setup 08 (Implement JsonWebToken or JWT)`](#project-setup-08-implement-jsonwebtoken-or-jwt)
 
 # Books Warehouse
 
@@ -150,5 +151,14 @@
 - [67.7 Load data based on the page number and size (no of products)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone08/module48-simple-react-SPA-with-simple-E-commerce/02ema-john-simple.md#677-interesting-load-data-based-on-the-page-number-and-size-no-of-products)
 - [Fix the currentPage overflow error (line-26 | ManageItems.js)](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-crescentpartha/blob/main/books-warehouse/src/components/Pages/Manage/ManageItems/ManageItems.js)
 - [Regex for names in StackOverflow](https://stackoverflow.com/questions/275160/regex-for-names)
+
+**[🔼Back to Top](#table-of-contents)**
+
+### `Project Setup 08 (Implement JsonWebToken or JWT)`
+
+- [68.3 Install Axios (in client-side)](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#install-axios-in-client-side)
+- [68.5 Introduction JWT token](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#json-web-tokens-jwt--jsonwebtoken---introduction)
+  - [Install JWT](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#install-jwt)
+- 
 
 **[🔼Back to Top](#table-of-contents)**
