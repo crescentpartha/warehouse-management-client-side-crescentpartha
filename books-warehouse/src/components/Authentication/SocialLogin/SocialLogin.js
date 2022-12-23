@@ -18,9 +18,9 @@ const SocialLogin = () => {
                 <img width={25} src={google} alt="google logo" />
                 <span className='text-white text-lg font-semibold uppercase'>Google</span>
             </button>
-            
-            { error && <p className='text-red-400'>{error.message}</p>}
-            { loading && <p className='text-red-400'>Loading...</p>}
+
+            {error && <p className='text-red-400'>{error.message}</p>}
+            {loading && <p className='text-red-400'>Loading...</p>}
 
             <div className='flex flex-row flex-nowrap items-center justify-center mx-5'>
                 <hr width='44%' className='h-1 bg-slate-50' />

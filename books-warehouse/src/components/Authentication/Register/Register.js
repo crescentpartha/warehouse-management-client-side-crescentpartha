@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
@@ -20,12 +21,16 @@ const Register = () => {
         // console.log('User', user);
     }
 
-    const onSubmit = async (data) => {
-        const { name, email, password } = data;
+    const onSubmit = async (data2) => {
+        const { name, email, password } = data2;
         // console.log(data);
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
+        // Create JWT Token, Get jwt token on client side
+        const {data} = await axios.post('http://localhost:5000/login', {email});
+        // console.log(data);
+        localStorage.setItem('accessToken', data.accessToken);
         navigate('/home');
     }
     // console.log(errors);
