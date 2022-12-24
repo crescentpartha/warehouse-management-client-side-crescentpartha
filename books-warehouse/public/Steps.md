@@ -172,5 +172,6 @@
 
 - Create [Tailwind Spinner/Loader](https://tailwind-elements.com/docs/standard/components/spinners/) ([Spinner](https://www.youtube.com/shorts/G5ZqNpFWE2Q) component) and Replace ___Loading...___ text in `LogIn`, `Register`, `SocialLogin`, `RequireAuth`, and `RetrievePassword` components.
 - [63.5.2 Set Dynamic page title based on Route using react-helmet-async](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#6352-set-dynamic-page-title-based-on-route-using-react-helmet-async)
+- [63.5.3 Do not allow protected route without email verification](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#6353-do-not-allow-protected-route-without-email-verification)
 
 **[🔼Back to Top](#table-of-contents)**
