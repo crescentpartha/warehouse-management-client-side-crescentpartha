@@ -1,4 +1,5 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -10,11 +11,29 @@ const SocialLogin = () => {
 
     if (user) {
         navigate('/home');
+        // console.log(user.user.email);
+    }
+
+    useEffect(() => {
+        const jwtToken = async () => {
+            // Create JWT Token, Get jwt token on client side
+            const email = user?.user?.email;
+            // console.log(email);
+            const { data } = await axios.post('http://localhost:5000/login', {email});
+            // console.log(data);
+            localStorage.setItem('accessToken', data.accessToken);
+            // navigate('/home');
+        }
+        jwtToken();
+    }, [user?.user?.email]);
+
+    const socialLoginToken = async () => {
+        await signInWithGoogle();
     }
 
     return (
         <div>
-            <button onClick={() => signInWithGoogle()} className='flex items-center justify-center gap-4 bg-blue-400 hover:bg-blue-500 py-2 mx-auto my-4 rounded w-10/12'>
+            <button onClick={() => socialLoginToken()} className='flex items-center justify-center gap-4 bg-blue-400 hover:bg-blue-500 py-2 mx-auto my-4 rounded w-10/12'>
                 <img width={25} src={google} alt="google logo" />
                 <span className='text-white text-lg font-semibold uppercase'>Google</span>
             </button>
