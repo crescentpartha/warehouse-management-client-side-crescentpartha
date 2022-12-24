@@ -162,5 +162,6 @@
 - [68.6 Create JWT Token, Get jwt token on client-side](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#686-advanced-create-jwt-token-get-jwt-token-on-client-side)
 - [68.7 Send jwt token in the server, verify and decode jwt token](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#687-advanced-send-jwt-token-in-the-server-verify-and-decode-jwt-token)
   - Modify `useLoadEmailOrderedBooks.js`
+- [68.8 Handle 401, 403 to log out user and interceptors](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#688-advanced-handle-401-403-to-log-out-user-and-interceptors)
 
 **[🔼Back to Top](#table-of-contents)**
