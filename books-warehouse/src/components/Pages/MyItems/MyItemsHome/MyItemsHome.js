@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import useLoadEmailOrderedBooks from '../../../../hooks/useLoadEmailOrderedBooks';
 import DisplayMyItems from '../DisplayMyItems/DisplayMyItems';
 import auth from '../../../../firebase.init';
+import PageTitle from '../../../SharedPages/PageTitle/PageTitle';
 
 const MyItemsHome = () => {
     const [user] = useAuthState(auth);
@@ -10,6 +11,7 @@ const MyItemsHome = () => {
     const [emailOrders] = useLoadEmailOrderedBooks(user.email);
     return (
         <div className='p-5 my-5 border-bottom w-screen'>
+            <PageTitle title="My Items"></PageTitle>
             <h2 className='text-4xl sm:text-5xl font-normal uppercase pb-10'>My Items</h2>
             <div className='mx-1 sm:mx-5 overflow-auto drop-shadow-sm'>
                 <table className='border-2 xl:w-full' width='1280px'>

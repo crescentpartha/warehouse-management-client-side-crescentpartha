@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import PageTitle from '../../../SharedPages/PageTitle/PageTitle';
 
 const AddItemsHome = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -27,6 +28,7 @@ const AddItemsHome = () => {
 
     return (
         <div className='p-5'>
+            <PageTitle title="Add Item"></PageTitle>
             <h2 className='text-4xl sm:text-5xl font-normal uppercase pb-10 pt-5'>Add Item</h2>
             <form className='' onSubmit={handleSubmit(onSubmit)}>
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4 w-11/12 sm:w-4/5 md:w-3/5 max-w-5xl mx-auto p-5 sm:p-10 bg-gray-50 rounded shadow-md'>

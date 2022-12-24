@@ -2,10 +2,12 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import CustomLink from '../../../SharedPages/CustomLinks/CustomLink';
 import CustomLinkTag from '../../../SharedPages/CustomLinks/CustomLinkTag';
+import PageTitle from '../../../SharedPages/PageTitle/PageTitle';
 
 const BlogsHome = () => {
     return (
         <div className='grid grid-cols-8 gap-5'>
+            <PageTitle title="Blogs"></PageTitle>
             <nav className='order-last border-l w-full col-span-4 sm:col-span-3 flex flex-col gap-2 items-start justify-start p-4 py-10 text-start shadow-md sticky top-14 overflow-auto h-screen'>
                 <h2 className='pb-5 uppercase font-bold text-3xl'>Recent Post</h2>
                 <div className='flex flex-col flex-wrap gap-2 items-start justify-center'>

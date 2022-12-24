@@ -11,6 +11,7 @@
     - [`Project Setup 06 (Protected Route and Require Auth)`](#project-setup-06-protected-route-and-require-auth)
     - [`Project Setup 07 (Implement Pagination)`](#project-setup-07-implement-pagination)
     - [`Project Setup 08 (Implement JsonWebToken or JWT)`](#project-setup-08-implement-jsonwebtoken-or-jwt)
+    - [`Project Setup 09 (Last Finishing)`](#project-setup-09-last-finishing)
 
 # Books Warehouse
 
@@ -163,6 +164,13 @@
 - [68.7 Send jwt token in the server, verify and decode jwt token](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#687-advanced-send-jwt-token-in-the-server-verify-and-decode-jwt-token)
   - Modify `useLoadEmailOrderedBooks.js`
 - [68.8 Handle 401, 403 to log out user and interceptors](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#688-advanced-handle-401-403-to-log-out-user-and-interceptors)
-- Implement JWT for Login, Register and SocialLogin users
+- Implement JWT for `Login`, `Register`, and `SocialLogin` users
+
+**[🔼Back to Top](#table-of-contents)**
+
+### `Project Setup 09 (Last Finishing)`
+
+- Create [Tailwind Spinner/Loader](https://tailwind-elements.com/docs/standard/components/spinners/) ([Spinner](https://www.youtube.com/shorts/G5ZqNpFWE2Q) component) and Replace ___Loading...___ text in `LogIn`, `Register`, `SocialLogin`, `RequireAuth`, and `RetrievePassword` components.
+- [63.5.2 Set Dynamic page title based on Route using react-helmet-async](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#6352-set-dynamic-page-title-based-on-route-using-react-helmet-async)
 
 **[🔼Back to Top](#table-of-contents)**
