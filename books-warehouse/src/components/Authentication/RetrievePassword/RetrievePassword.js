@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
+import Spinner from '../../SharedPages/Spinner/Spinner';
 
 const RetrievePassword = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -38,7 +39,7 @@ const RetrievePassword = () => {
                 />
                 <p className='text-red-400'>{errors?.email?.message}</p>
                 {
-                    sending && <p className='text-red-400'>Sending...</p>
+                    sending && <><p className='text-green-400'>Sending...</p><Spinner></Spinner></>
                 }
                 {
                     error && <p className='text-red-400'>{error.message}</p>

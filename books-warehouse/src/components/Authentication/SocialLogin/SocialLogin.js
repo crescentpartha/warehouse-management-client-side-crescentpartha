@@ -4,6 +4,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import google from '../../../images/google.png';
+import Spinner from '../../SharedPages/Spinner/Spinner';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -39,7 +40,8 @@ const SocialLogin = () => {
             </button>
 
             {error && <p className='text-red-400'>{error.message}</p>}
-            {loading && <p className='text-red-400'>Loading...</p>}
+            {/* {loading && <p className='text-red-400'>Loading...</p>} */}
+            {loading && <Spinner></Spinner>}
 
             <div className='flex flex-row flex-nowrap items-center justify-center mx-5'>
                 <hr width='44%' className='h-1 bg-slate-50' />

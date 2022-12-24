@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Spinner from '../../SharedPages/Spinner/Spinner';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -70,7 +71,8 @@ const Login = () => {
                     })}
                 />
                 {
-                    loading && <p className='text-red-400'>Loading...</p>
+                    // loading && <p className='text-red-400'>Loading...</p>
+                    loading && <Spinner></Spinner>
                 }
                 {
                     error && <p className='text-red-400'>{error.message}</p>

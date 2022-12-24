@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Spinner from '../../SharedPages/Spinner/Spinner';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -19,6 +20,7 @@ const Register = () => {
 
     if (user) {
         // console.log('User', user);
+        navigate('/home');
     }
 
     const onSubmit = async (data2) => {
@@ -31,7 +33,7 @@ const Register = () => {
         const {data} = await axios.post('http://localhost:5000/login', {email});
         // console.log(data);
         localStorage.setItem('accessToken', data.accessToken);
-        navigate('/home');
+        // navigate('/home');
     }
     // console.log(errors);
 
@@ -82,7 +84,8 @@ const Register = () => {
                     })}
                 />
                 {
-                    loading && <p className='text-red-400'>Loading...</p>
+                    // loading && <p className='text-red-400'>Loading...</p>
+                    loading && <Spinner></Spinner>
                 }
                 {
                     error && <p className='text-red-400'>{error.message}</p>
