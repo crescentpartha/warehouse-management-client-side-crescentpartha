@@ -47,7 +47,7 @@ const ItemDetail = () => {
         const proceed = window.confirm('Are you sure want to buy this book?');
         if (proceed) {
             // Update a book item in the client-side and send to the server-side for bookCollection
-            const url = `http://localhost:5000/book/${id}`;
+            const url = `https://books-warehouse-management-server-side-crescentpartha.vercel.app/book/${id}`;
             // console.log(url, id);
             fetch(url, {
                 method: 'PUT',
@@ -72,7 +72,7 @@ const ItemDetail = () => {
                 }
                 // console.log(allOrdersForThisProductAndEmail.quantity, allOrdersForThisProductAndEmail._id, orderDataUpdate);
 
-                const url = `http://localhost:5000/order/${allOrdersForThisProductAndEmail._id}`;
+                const url = `https://books-warehouse-management-server-side-crescentpartha.vercel.app/order/${allOrdersForThisProductAndEmail._id}`;
                 // console.log(url, id);
                 fetch(url, {
                     method: 'PUT',
@@ -88,7 +88,7 @@ const ItemDetail = () => {
             }
             else {
                 // POST a ordered book data from client-side to server-side for orderCollection
-                const url2 = `http://localhost:5000/order`;
+                const url2 = `https://books-warehouse-management-server-side-crescentpartha.vercel.app/order`;
                 fetch(url2, {
                     method: 'POST',
                     headers: {
@@ -112,7 +112,7 @@ const ItemDetail = () => {
         // console.log(data);
 
         // Update a book item in the client-side and send to the server-side
-        const url = `http://localhost:5000/book/${itemDetailId}`;
+        const url = `https://books-warehouse-management-server-side-crescentpartha.vercel.app/book/${itemDetailId}`;
         // console.log(url, id);
         fetch(url, {
             method: 'PUT',

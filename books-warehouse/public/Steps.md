@@ -12,6 +12,9 @@
     - [`Project Setup 07 (Implement Pagination)`](#project-setup-07-implement-pagination)
     - [`Project Setup 08 (Implement JsonWebToken or JWT)`](#project-setup-08-implement-jsonwebtoken-or-jwt)
     - [`Project Setup 09 (Last Finishing)`](#project-setup-09-last-finishing)
+    - [`Project Setup 10 (Server Deploy on Vercel)`](#project-setup-10-server-deploy-on-vercel)
+      - [`Resources`](#resources)
+      - [`How to deploy Express API without using vercel CLI`](#how-to-deploy-express-api-without-using-vercel-cli)
 
 # Books Warehouse
 
@@ -173,5 +176,105 @@
 - Create [Tailwind Spinner/Loader](https://tailwind-elements.com/docs/standard/components/spinners/) ([Spinner](https://www.youtube.com/shorts/G5ZqNpFWE2Q) component) and Replace ___Loading...___ text in `LogIn`, `Register`, `SocialLogin`, `RequireAuth`, and `RetrievePassword` components.
 - [63.5.2 Set Dynamic page title based on Route using react-helmet-async](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#6352-set-dynamic-page-title-based-on-route-using-react-helmet-async)
 - [63.5.3 Do not allow protected route without email verification](https://github.com/crescentpartha/projectsHero/blob/main/milestone-module/milestone10/module60-responsive-react-website-and-react-recap/00module-overview-and-react-review.md#6353-do-not-allow-protected-route-without-email-verification)
+
+**[🔼Back to Top](#table-of-contents)**
+
+### `Project Setup 10 (Server Deploy on Vercel)`
+
+#### `Resources`
+
+1. [Deploy an Express API on Vercel (using Vercel CLI & without using CLI)](https://fahimahammed-cse.medium.com/deploy-an-express-api-on-vercel-eebc13ace629)
+2. [How to deploy a Node/Express server using Vercel CLI](https://medium.com/@shafiarahmanchy13/how-to-deploy-a-node-express-server-using-vercel-cli-f0a464d4e88c)
+3. [How to Deploy node and express JS server on Vercel | Bangla](https://www.youtube.com/watch?v=hiZy1enqIyg)
+4. [Free deploy node express js app on vercel | Bangla](https://www.youtube.com/watch?v=ICPG5VdJmvY)
+
+**[🔼Back to Top](#table-of-contents)**
+
+#### `How to deploy Express API without using vercel CLI`
+
+1. [Sign-Up](https://vercel.com/signup) or [Login](https://vercel.com/login) using GitHub on [Vercel.com](https://vercel.com/)
+2. Create `vercel.json` file in the ___root___ of ___server-side repository___
+
+``` JSON
+// In vercel.json
+
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "./index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
+}
+```
+3. Add ___node engines___ in the `package.json` file of ___server-side repository___
+
+``` JSON
+// In package.json (Add those lines of code)
+
+"engines": {
+  "node": "16.x"
+},
+```
+
+``` JSON
+// In package.json (Full Example)
+{
+  "name": "warehouse-management-server-side-crescentpartha",
+  "version": "1.0.0",
+  "description": "\"# warehouse-management-server-side-crescentpartha\"",
+  "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  .
+  .
+  .
+  .
+
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^4.12.1"
+  }
+}
+```
+4. Remove `await` ___keyword___ from `await client.connect();` inside of `index.js` file on ___server-side repository___.
+     - Otherwise, can't get other ___routes data___ like `/book` or `/order`.
+
+``` JavaScript
+// In index.js
+
+// await client.connect();
+client.connect();
+```
+5. `Push` your all modification on GitHub so that ___server-side repo___ keep ___up-to-date___ before deployment.
+6. Go to ___dashboard___ > clicked on ___add new project___ > ___import___ your project > give ___project-name___ > set all ___environment-variables___ > ___Deploy___
+7. ___Copy___ `DOMAINS URL` and ___replace___ `localhost:3000` on ___Client-side___.
+     - `Ctrl + Shift + F` > Search on every files.
+     - Type `https://localhost:3000/`
+     - Replace by `https://books-warehouse-management-server-side-crescentpartha.vercel.app/`
+
+``` JavaScript
+// Replace localhost by Domains URL on Client-Side
+
+https://localhost:3000/login > https://books-warehouse-management-server-side-crescentpartha.vercel.app/login
+```
+8. Check ___everything works___ fine or not, then ___pull___ all modification on ___remote repository___.
 
 **[🔼Back to Top](#table-of-contents)**

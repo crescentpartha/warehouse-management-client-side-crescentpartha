@@ -10,13 +10,13 @@ const ManageItems = () => {
 
     // Load data based on the currentPage and productSize;
     useEffect(() => {
-        fetch(`http://localhost:5000/book?currentPage=${currentPage}&productSize=${productSize}`)
+        fetch(`https://books-warehouse-management-server-side-crescentpartha.vercel.app/book?currentPage=${currentPage}&productSize=${productSize}`)
             .then(res => res.json())
             .then(data => setBooks(data));
     }, [currentPage, productSize]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/bookCount')
+        fetch('https://books-warehouse-management-server-side-crescentpartha.vercel.app/bookCount')
         .then(res => res.json())
         .then(data => {
             const count = data.count;

@@ -22,7 +22,7 @@ const DisplayManageItems = ({ book }) => {
             console.log('Deleting book with id =', id);
 
             // delete a book in client-side and send to the server-side
-            const url = `http://localhost:5000/book/${id}`;
+            const url = `https://books-warehouse-management-server-side-crescentpartha.vercel.app/book/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

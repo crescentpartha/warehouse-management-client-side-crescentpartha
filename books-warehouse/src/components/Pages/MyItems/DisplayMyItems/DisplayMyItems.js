@@ -21,7 +21,7 @@ const DisplayMyItems = ({ order }) => {
             console.log('Deleting ordered book with id =', id);
 
             // DELETE a ordered book data from client-side and send to the server-side
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://books-warehouse-management-server-side-crescentpartha.vercel.app/order/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

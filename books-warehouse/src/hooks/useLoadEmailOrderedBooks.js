@@ -11,7 +11,7 @@ const useLoadEmailOrderedBooks = (email) => {
     useEffect(() => {
         // Handle 401, 403 to log out user and interceptors
         const getOrders = async () => {
-            const url = `http://localhost:5000/order/email/${email}`;
+            const url = `https://books-warehouse-management-server-side-crescentpartha.vercel.app/order/email/${email}`;
             // fetch(url, { // Send jwt token in the server, to verify and decode jwt token;
             //     headers: {
             //         authorization: `Bearer ${localStorage.getItem('accessToken')}`,

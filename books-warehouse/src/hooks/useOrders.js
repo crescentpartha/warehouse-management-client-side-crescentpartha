@@ -4,7 +4,7 @@ const useOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/order')
+        fetch('https://books-warehouse-management-server-side-crescentpartha.vercel.app/order')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [orders]);

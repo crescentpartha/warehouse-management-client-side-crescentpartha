@@ -4,7 +4,7 @@ const useLoadSingleBookItem = (id) => {
     const [book, setBook] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/book/${id}`;
+        const url = `https://books-warehouse-management-server-side-crescentpartha.vercel.app/book/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setBook(data));

@@ -11,7 +11,7 @@ const AddItemsHome = () => {
         // console.log(data);
 
         // POST a book data from client-side to server-side
-        const url = `http://localhost:5000/book`;
+        const url = `https://books-warehouse-management-server-side-crescentpartha.vercel.app/book`;
         fetch(url, {
             method: 'POST',
             headers: {

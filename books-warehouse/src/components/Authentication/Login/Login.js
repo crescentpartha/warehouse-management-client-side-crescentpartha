@@ -31,7 +31,7 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password);
         
         // Create JWT Token, Get jwt token on client side
-        const {data} = await axios.post('http://localhost:5000/login', {email});
+        const {data} = await axios.post('https://books-warehouse-management-server-side-crescentpartha.vercel.app/login', {email});
         // console.log(data);
         localStorage.setItem('accessToken', data.accessToken);
         navigate(from, { replace: true });

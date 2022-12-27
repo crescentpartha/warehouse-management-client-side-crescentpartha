@@ -20,7 +20,7 @@ const SocialLogin = () => {
             // Create JWT Token, Get jwt token on client side
             const email = user?.user?.email;
             // console.log(email);
-            const { data } = await axios.post('http://localhost:5000/login', {email});
+            const { data } = await axios.post('https://books-warehouse-management-server-side-crescentpartha.vercel.app/login', {email});
             // console.log(data);
             localStorage.setItem('accessToken', data.accessToken);
             // navigate('/home');
